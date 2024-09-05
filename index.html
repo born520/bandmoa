@@ -1,1 +1,470 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>밴드 특가모음</title><style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+      background-color: #fafafa;
+    }
+    .container {
+      width: 100%;
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 10px;
+      column-count: 6;
+      column-gap: 10px;
+    }
+    .card {
+      position: relative;
+      break-inside: avoid;
+      background-color: white;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-block;
+      width: 100%;
+      border: 2px solid transparent;
+    }
+    .card.expanded {
+      border: 2px solid red;
+      transform: scale(1.05);
+      animation: blink-border 1s infinite;
+      z-index: 10;
+    }
+    @keyframes blink-border {
+      0% { border-color: red; }
+      50% { border-color: transparent; }
+      100% { border-color: red; }
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .card p {
+      padding: 15px;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .card p.excerpt {
+      font-size: 14px;
+      color: #333;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+    }
+    .card-content {
+      display: none;
+      padding: 15px;
+      background-color: #f9f9f9;
+    }
+    .card-content img {
+      margin-top: 10px;
+    }
+    .card.expanded .excerpt {
+      display: none;
+    }
+    .card.expanded .card-content {
+      display: block;
+    }
+    @media (max-width: 1800px) { .container { column-count: 5; } }
+    @media (max-width: 1500px) { .container { column-count: 4; } }
+    @media (max-width: 1200px) { .container { column-count: 3; } }
+    @media (max-width: 900px) { .container { column-count: 2; } }
+    @media (max-width: 600px) {
+      .container { column-count: 1; }
+      body { font-size: 12px; }
+      .card p.excerpt { font-size: 12px; }
+    }
+  </style></head><body><div class="container">
+      <div id="card-0" class="card" onclick="toggleCard(0)">
+        <img src="https://coresos-phinf.pstatic.net/a/377d46/3_23bUd018svc1oo6e24854ka2_vr5lal.jpg" alt="Post image">
+        <p class="excerpt">🎁 방콕&amp;파타야 선물같은 SPOT 특가🎁<br>📌방콕&amp;파타야 남다른 노팁노옵션!📌<br>파타야 2박 5성급 호텔로 고정!<br>부담없는 노팁노옵션으로<br>�...</p>
+        <div class="card-content">
+          <p>🎁 방콕&amp;파타야 선물같은 SPOT 특가🎁<br>📌방콕&amp;파타야 남다른 노팁노옵션!📌<br>파타야 2박 5성급 호텔로 고정!<br>부담없는 노팁노옵션으로<br>💎고품격 방콕&amp;파타야 여행을 경험하세요💎<br>❤거대한 황금빛 와불상이 있는 왓포사원<br>🧡태국하면 마사지! 근육 쫙쫙 마사지 포함<br>💛실속이여도! 시~원한 해양스포츠가 기다리는 산호섬<br>💚노노이니까! 럭셔리한 요트에서 스노클링 및 줄낚시체험<br>💙특식 3회 - MK수끼, 무제한삼겹살, 망고밥 🥭🍚<br>💜노팁 노옵션은 약 ＄300불 상당의 혜택을 선포함🎉<br>-기사가이드팁 (＄50)<br>-맛사지 1시간 → 2시간 (＄20)<br>-산호섬 → 요트투어 차액 (＄60)<br>-힐튼 호라이즌 루프탑바 (＄40)<br>-방콕 아시아티크+욧시암크루즈 (＄80)<br>-파타야 2박 5성급 호텔 (＄50)<br>✔NOTICE✔<br>-9/23 까지 항공 발권조건입니다.<br>-여권사본 지참 후 예약 부탁드리겠습니다.<br>-항공 발권 시, 항공료 완납 조건 상품입니다<br>      <br>담당 : 장수현 사원<br>☎070-8656-1187<br>💌 tourpon25@nate.com<br>[ 1:1실시간 상담 &amp; 예약]<br>https://pf.kakao.com/_KIgld/chat</p>
+          <img src="https://coresos-phinf.pstatic.net/a/377d38/3_43bUd018svcw6tv2tu04imw_vr5lal.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/377d48/3_63bUd018svc1rga0h88vgp62_vr5lal.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-1" class="card" onclick="toggleCard(1)">
+        <img src="https://coresos-phinf.pstatic.net/a/377c14/4_1ehUd018svck98b87h8wtdg_eoy9iv.jpg" alt="Post image">
+        <p class="excerpt">😊 베트남(하롱베이)+캄보디아(씨엠립) ♪ ♪<br>풀서비스 베트남항공 [VN] 이용<br>📢두나라 여행<br>✅ 모객협조 ✅<br>9/16 노노 출확 1,129,000원 / ...</p>
+        <div class="card-content">
+          <p>😊 베트남(하롱베이)+캄보디아(씨엠립) ♪ ♪<br>풀서비스 베트남항공 [VN] 이용<br>📢두나라 여행<br>✅ 모객협조 ✅<br>9/16 노노 출확 1,129,000원 / 잔여2석<br>9/30  노노 출확 999,000원 / 잔여6석 <br>호텔 정5성급 4박<br>- 하롱베이 드리오로 또는 동급 <br>   캄보디아 미라클  또는 소카라이 또는 동급<br>💚품격  노팁  + 노옵션  혜택<br>기사+가이드 팁 포함 ($60)<br>씨푸드 ($30)<br>하롱베이 비경투어 ($50)<br>두 지역 전신마사지 1시간 -&gt; 2시간 업글 진행 ($40)<br>하롱 테마파크 ($50)<br>톤레샆 쪽배 포함 ($30)<br>4박 정5성으로 업그레이드<br>👀☘️ 약 $290 가량 즐길거리 선 포함으로 가득찬 일정<br>☎️담당: 김남영 실장  070-8656-1219<br>대표 051-462-4020<br>[카카오톡 문의]<br>http://pf.kakao.com/_KIgld<br>인도차이나반도            <br>            <br>               <br>               <br>😍</p>
+          <img src="https://coresos-phinf.pstatic.net/a/376j4a/i_2hjUd018svc122oaeq2l7yxl_eoy9iv.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3760d3/6_8ddUd018svc3774m9bditz9_eoy9iv.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/375f72/6_b2bUd018svcowv75ikdky4h_eoy9iv.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/375fhf/5_12bUd018svc1vlzmv582rw01_eoy9iv.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/375fb5/7_e2bUd018svc1t69vseh81b4o_eoy9iv.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/375f0h/c_72bUd018svc154f1wjfat06v_eoy9iv.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/375f1b/c_g2bUd018svc4lfm19adsj8s_eoy9iv.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/375f3a/a_32bUd018svcp27rhgqobn12_eoy9iv.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/375f89/a_f2bUd018svcylpbh5gisapf_eoy9iv.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-2" class="card" onclick="toggleCard(2)">
+        <img src="https://coresos-phinf.pstatic.net/a/37825c/e_20jUd018svcsdql32ua8awq_f5vh1y.jpg" alt="Post image">
+        <p class="excerpt">🚀중국 북경 대특가 요금🚀<br>🀄연/금/원/명/청나라,중화민국의 수도 베이징<br>🀄중국 역사와 문화의 중심 베이징<br>🀄현대 중국 정치권력의 핵심지역 베이징<br>도...</p>
+        <div class="card-content">
+          <p>🚀중국 북경 대특가 요금🚀<br>🀄연/금/원/명/청나라,중화민국의 수도 베이징<br>🀄중국 역사와 문화의 중심 베이징<br>🀄현대 중국 정치권력의 핵심지역 베이징<br>도시 전체가 박물관이라 해도 좋을 만큼<br>발길 닿는 곳 , 눈길 닿는 곳마다<br>중국의 역사, 문화, 아름다움을 느끼실 수 있는 북경입니다<br>* 북경을 경유하여 중국 내륙을 관광하는 다양한 상품들도 문의 주세요 *<br>9월 21일 북경 -출발확정<br>담당 :윤서영<br>070-8656-1228<br>[카카오톡1:1상담]<br>http://pf.kakao.com/_ucxkld/chat</p>
+          <img src="https://coresos-phinf.pstatic.net/a/377b65/h_fi3Ud018svc1lhbw345l6thk_f5vh1y.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-3" class="card" onclick="toggleCard(3)">
+        <img src="https://coresos-phinf.pstatic.net/a/377i64/c_6cjUd018svcc06e9ocnp2bl_qufiuo.jpg" alt="Post image">
+        <p class="excerpt">곧 다가오는 🌝2024 최장 연휴 추석🌝<br>휴양🏖 관광🚩 모두 즐길 수 있는 동남아로 떠나요~<br>추석기간 동남아 전지역 🚨빠르게 마감중!!🚨<br>고민하는 순간 ...</p>
+        <div class="card-content">
+          <p>곧 다가오는 🌝2024 최장 연휴 추석🌝<br>휴양🏖 관광🚩 모두 즐길 수 있는 동남아로 떠나요~<br>추석기간 동남아 전지역 🚨빠르게 마감중!!🚨<br>고민하는 순간 좌석은 사라집니다 💨<br>[투어폰 동남아 1:1실시간 상담 &amp; 예약]<br>http://pf.kakao.com/_KIgld</p>
+          <img src="https://coresos-phinf.pstatic.net/a/37814a/7_638Ud018svcm3go0peyozkt_su8ymq.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378116/4_g7iUd018svcmhei6m67fppf_su8ymq.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37811g/7_738Ud018svc15zrhdpqwm2bv_su8ymq.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37817e/7_838Ud018svc1hw89r6vfino6_su8ymq.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378180/7_938Ud018svcozn71dzm46j0_su8ymq.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-4" class="card" onclick="toggleCard(4)">
+        <img src="https://coresos-phinf.pstatic.net/a/377h50/g_01eUd018svcqfg3ie70xifb_qufcz1.jpg" alt="Post image">
+        <p class="excerpt">🌴 코타키나발루 SPOT 특가🌴<br>🌟 밍가든 VS 그란디스 가성비 끝판왕대결!🌟<br>👉🏼 밍가든 최저가 379,000원~🎉<br>👉🏼 그란디스  최저가 399...</p>
+        <div class="card-content">
+          <p>🌴 코타키나발루 SPOT 특가🌴<br>🌟 밍가든 VS 그란디스 가성비 끝판왕대결!🌟<br>👉🏼 밍가든 최저가 379,000원~🎉<br>👉🏼 그란디스  최저가 399,000원~🎉<br>🏨 가성비 좋은 호텔에서 몸도 마음도 힐링하기에 BEST!!<br>🏨 가성비부터 호텔 휴양까지 모두 GOOD!!<br>🏨 호핑+시내 관광+선셋 나이트투어<br>😎 코타키나발루 관광 포인트😎<br>👀 다양한 선택 관광 옵션<br>👀 내가 원하는 날짜에 마음에 쏙 드는 여행을 할 수 있는 기회<br>👀 눈 앞에서 초록빛이 아른아른 예쁜 선셋 반딧불투어 (선택 옵션)<br>👀 세계 3대 석양으로 유명한 선셋 나이트투어<br>👀 황홀한 석양과 푸른빛 바다에서 남기는 인생샷<br>⛱️ 휴양 포인트 ⛱️<br>👉🏻 연중 온도 변화가 적어 언제 출발해도 해도 좋은 여행지<br>👉🏻 여유로운 자유시간<br>✔️ 수(3박5일)/토(4박6일) 주 2회 운항입니다.<br>✔️항공스케줄<br>🛫 부산 - 코타키나발루 BX761 19:00-23:10<br>🛬 코타키나발루 - 부산 BX762 00:10-06:20<br>☎️문의 및 담당 : 최원준 사원 070-8656-0208<br>NATE ON: tourpon205@nate.com<br>💛카톡 1:1 문의💛<br>카톡채널 "투어폰동남아"로 문의주시면 예약과 상담 가능합니다.<br>채널 추가 후 채팅 부탁드립니다~<br>http://pf.kakao.com/_KIgld</p>
+          <img src="https://coresos-phinf.pstatic.net/a/377h1g/g_21eUd018svcvadpmq2mpd82_qufcz1.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3736f2/2_6h4Ud018svc15tx5bkheiaja_svko92.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376aj9/h_46jUd018svc1ugkszcp859lc_qufcz1.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376a18/h_76jUd018svcdi5ak2tuasoc_qufcz1.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376adc/h_86jUd018svc1aq82g6mwo0pq_qufcz1.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376a9h/h_a6jUd018svcblh40ihfio4u_qufcz1.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376ajd/a_16jUd018svcgohqt0wywh9e_qufcz1.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376a2h/a_36jUd018svcgku83s0gox3n_qufcz1.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376a2f/a_46jUd018svcijo55wxocdcv_qufcz1.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-5" class="card" onclick="toggleCard(5)">
+        <img src="https://coresos-phinf.pstatic.net/a/3780c2/1_0i8Ud018svc1vkuzbvzuyqtr_p3nzj7.jpg" alt="Post image">
+        <p class="excerpt">⭐알아두면 나도 중국여행 고수⭐<br>🚨중국 출/입국 필독사항🚨<br>중국여행이 처음이신 분들, <br>중국여행을 준비함에 있어 어려움을 느끼시는 분들<br>모두 주목! 여러분...</p>
+        <div class="card-content">
+          <p>⭐알아두면 나도 중국여행 고수⭐<br>🚨중국 출/입국 필독사항🚨<br>중국여행이 처음이신 분들, <br>중국여행을 준비함에 있어 어려움을 느끼시는 분들<br>모두 주목! 여러분들을 위해 간단하게 <br>중국 출/입국 시 필요한 것들을 정리해보았어요!<br>중국입국 필독사항 동영상을 준비해보았어요~ 한번에 이해가 쏙!<br>영상은 조금 간다하게 설명되서 어려우시다구요?<br>그래서 글로도 조금 설명드려볼까 합니다!<br>첫 번째 여권!<br>여행 가는데 여권 없이 가는 건<br>전쟁터에 총 없이 가기. 축구장에 공 없이 가기 등<br>정말 중요한 거 다들 아시죠??여행 떠나기 전 여권 한번 더 체크!<br>두 번째 비자!<br>중국여행을 준비하면 가장 막막하게 느껴지는 비자!<br>제가 완전정리 도와드립니다!<br>1.별지비자 - 내 여권에 비자 NO! 별도 종이에 비자 YES!<br>하지만 저희 투어폰을 통해서 여행하신다면<br>전~~혀 걱정할 필요가 없겠죠?<br>다음은<br>저희 투어폰을 통해서 여행 하신다면 걱정할 필요 없겠지만<br>이 글을 보시는 분 중에서 개인적으로 중국여행을 계획하시는 분!<br>개인 관광비자에 대해서도 알려드려요!<br> <br>2.개인 관광비자<br>어떠신가요?<br>이제는 중국 비자 문제로 걱정하실 일 없겠죠?<br>자신있게 출입국 하자구요~<br>마지막 여권 분실을 대비한 준비물!<br>여행을 가면 마주할 &#39;수도&#39; 있는<br>여권 분실 혹은 소매치기..<br>혹시 모를 상황을 대비하여<br>여권분실을 대비한 준비물 알려드려요!<br>여행중에는<br>내가 곧 여권이고, 여권이 곧 나라는 생각으로<br>소중하게 보관해주세요!<br>이제는 중국여행의 막막함이 조금 해소되셨겠죠?<br>앞으로도 더 많은 꿀팁으로 찾아오겠습니다<br>감사합니다❤️<br> 아래 링크에서는 다양한 여행 꿀팁을 확인할 수 있어요!</p>
+          <img src="https://coresos-phinf.pstatic.net/a/378041/2_ci8Ud018svck0cw1atvjbti_p3nzj7.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378114/g_06iUd018svcne53rbq3c8cg_p3nzj7.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378157/5_670Ud018svc1nqzsxwi2pmjz_p3nzj7.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781c6/j_771Ud018svcp80vdppn66oz_p3nzj7.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781id/d_070Ud018svcx5nby7mjdpob_p3nzj7.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37812f/g_670Ud018svc1r19xdfeqyrkt_p3nzj7.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378118/6_j71Ud018svco40tl1k33u4z_p3nzj7.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781ei/7_f71Ud018svc117isloemwk10_p3nzj7.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781gd/4_472Ud018svcl91g7n16m144_p3nzj7.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781hg/j_g72Ud018svc14zyp2rrxxra0_p3nzj7.png" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-6" class="card" onclick="toggleCard(6)">
+        <img src="https://coresos-phinf.pstatic.net/a/3781jc/h_561Ud018svc1co0ud82v2i0x_1nu7wh.jpg" alt="Post image">
+        <p class="excerpt">빠르면 싸다⏳<br>초특가로 만나는 동양의 하와이✨<br>유네스코 지정 청정지역 하이난🏖<br>최저가보장🤙<br>10월 출발 199,000가 떳다💥<br>📢10/2발권조건 ...</p>
+        <div class="card-content">
+          <p>빠르면 싸다⏳<br>초특가로 만나는 동양의 하와이✨<br>유네스코 지정 청정지역 하이난🏖<br>최저가보장🤙<br>10월 출발 199,000가 떳다💥<br>📢10/2발권조건 12월까지 상품가 오픈🎊<br>▶▶▶10/27부터 주 4회 증편◀◀◀<br>수,목= 3박5일 / 토,일=4박6일<br>하이난의 매력 POINT ✨<br>❤중국의 제주도! 동양의 하와이🌞<br>💛NO쇼핑 + NO비자로 부담없는 여행<br>💚2명이상 100% 편안한 출발확정<br>💙유네스코 지정 청정지역<br>🖤10/2 발권조건<br>✈ 하이난 항공 스케줄✈<br>~10/26: 수 3박5일 / 토 4박6일 (주2회)<br>10/27~: 수,목 3박5일 / 토,일 4박6일 (주4회)<br>BX373 부산 22:00 - 삼아 01:25(+1)<br>BX374 삼아 02:20 - 부산 07:20<br>연길 &amp; 하이난 담당: 강민경<br>T. 070-8656-0252<br>🌍 tourpon001@nate.com<br>[투어폰 중국 1:1실시간 상담 &amp; 예약]<br>http://pf.kakao.com/_ucxkld/chat</p>
+          <img src="https://coresos-phinf.pstatic.net/a/378144/d_g61Ud018svcnb3wh8dc56e2_1nu7wh.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781c7/d_h61Ud018svcdte8z2tekcn7_1nu7wh.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37813j/d_j61Ud018svc1ffqhqnmx9pqn_1nu7wh.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781be/e_061Ud018svcu2nfbrm33z7m_1nu7wh.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781eg/8_162Ud018svc1px0k6pryb84b_1nu7wh.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37812h/7_962Ud018svcye9dbrc24n9j_1nu7wh.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378127/7_a62Ud018svc1crpxkpx4tts_1nu7wh.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37816c/7_b62Ud018svc1pp8gzow3gyod_1nu7wh.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37814h/7_c62Ud018svc5x9rgej42gao_1nu7wh.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-7" class="card" onclick="toggleCard(7)">
+        <img src="https://coresos-phinf.pstatic.net/a/37818b/e_a47Ud018svc10kyx5q980uxg_qufiuo.jpg" alt="Post image">
+        <p class="excerpt">🎁선물같은 특가 도착🎁<br>헤난 프리미어 코스트를 이가격에⁉<br>초 신 상 리조트✨ 헤난 프리미어 코스트 ✨<br>디럭스 ➡ 프리미어 무료 룸 업그레이드 포함<br>🚨날짜...</p>
+        <div class="card-content">
+          <p>🎁선물같은 특가 도착🎁<br>헤난 프리미어 코스트를 이가격에⁉<br>초 신 상 리조트✨ 헤난 프리미어 코스트 ✨<br>디럭스 ➡ 프리미어 무료 룸 업그레이드 포함<br>🚨날짜별 선착순 10명 한정!🚨<br>최저가 559,000로 만나보세요<br>가이드와 함께하는 편안한 여행!! 세미PKG<br>내맘대로 일정 DIY! 노쇼핑/노옵션 자유상품<br>✈️에어부산 항공 스케쥴✈️<br>BX703 부산 21:30 - 보홀 00:05 +1<br>BX704 보홀 01:45 - 부산 07:05<br>( 수/목 3박5일, 토/일 4박6일 )<br>☎️문의 및 담당: 강다영 사원 070-8656-0251<br>NATE ON : tourpon201@nate.com<br>B2B전용[1:1실시간 상담 &amp; 예약]<br>http://pf.kakao.com/_KIgld</p>
+          <img src="https://coresos-phinf.pstatic.net/a/37813g/g_047Ud018svc32thlbmjhvc5_qufiuo.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781f8/g_147Ud018svc196pzzv659wck_qufiuo.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37816g/g_347Ud018svc1lv25tnbken0z_qufiuo.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781da/i_247Ud018svcjywtilla4ffu_qufiuo.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37811f/0_c48Ud018svc13ueup665v2ee_qufiuo.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37812b/0_h48Ud018svcdpgaa8lked2f_qufiuo.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781j5/1_248Ud018svc1iywrnv8ccjem_qufiuo.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378101/1_948Ud018svc1y10ag2j7pcc0_qufiuo.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781c6/1_h48Ud018svcehw583f0i538_qufiuo.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-8" class="card" onclick="toggleCard(8)">
+        <img src="https://coresos-phinf.pstatic.net/a/3781jb/g_946Ud018svc1uv0fijvxw9gf_1wyq1t.jpg" alt="Post image">
+        <p class="excerpt">🔥🔥10월 장가계 잔여날짜 안내🔥🔥<br>가을에 가면 가장 좋은 장가계<br>10월 좌석 빠르게 마감중입니다😁<br>늦을수록 요금만 오를뿐....<br>장가계 여행 계획중...</p>
+        <div class="card-content">
+          <p>🔥🔥10월 장가계 잔여날짜 안내🔥🔥<br>가을에 가면 가장 좋은 장가계<br>10월 좌석 빠르게 마감중입니다😁<br>늦을수록 요금만 오를뿐....<br>장가계 여행 계획중이시라면 지금이 적기!!<br>한국인이 사랑하는 1등 관광지👍<br>영원한 베스트셀러<br>사계절 언제나 아름다운 장가계 여행<br>지금 바로 떠나보세요.<br>🚨10월 잔여석이 얼마 남지 않았습니다.<br>🚨9월 25일까지 항공권 발권조건!!<br>📢6명부터 출발확정!!<br>📢편안한 국적기 에어부산 직항으로 경유 없이 장가계 이동!<br>📢5대특식 맛있는 여행!<br>📢전일정 리무진 버스 이용 (8명미만시 일반차량 이용)<br>📢전문적인 가이드님과 함께하는 즐거운 여행!<br>담당: 투어폰 이주애<br>직통번호: 070-8656-0542<br>채팅바로가기 http://pf.kakao.com/_ucxkld/chat</p>
+          <img src="https://coresos-phinf.pstatic.net/a/3781c6/g_b46Ud018svc415v4cfmv28m_1wyq1t.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781fe/g_d46Ud018svcrqojku36t3tg_1wyq1t.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37817j/g_f46Ud018svcbep6csntc0hj_1wyq1t.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378192/g_h46Ud018svc1s2emrrwpnbmb_1wyq1t.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781ge/0_547Ud018svc1ccnc0pwhj0nl_1wyq1t.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378136/0_747Ud018svcwt4py4i3svhb_1wyq1t.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781e2/0_c47Ud018svcxpujrd56tri5_1wyq1t.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781f4/1_047Ud018svc19ei74acqnces_1wyq1t.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37813c/1_447Ud018svcr07i49qhqftl_1wyq1t.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-9" class="card" onclick="toggleCard(9)">
+        <img src="https://coresos-phinf.pstatic.net/a/3781hi/9_73hUd018svc1p9ssq0fa7hsy_qnd77x.jpg" alt="Post image">
+        <p class="excerpt">미식의 나라 일본, 식도락여행🍱🥡🍙🍜🍣🍤<br>🌞큐슈 플러스반자유팩🌞<br>패키지 일정+ 자유일정, 원하는 대로 즐기는 2박3일<br>🌞10/7(월) 499,000...</p>
+        <div class="card-content">
+          <p>미식의 나라 일본, 식도락여행🍱🥡🍙🍜🍣🍤<br>🌞큐슈 플러스반자유팩🌞<br>패키지 일정+ 자유일정, 원하는 대로 즐기는 2박3일<br>🌞10/7(월) 499,000원 최저가초초특가🌞<br>🚩↓ 큐슈 플러스반자유팩 체험기 1탄♪♬<br>https://youtu.be/AtPv2YTGf6g?si=LajtEmSDCSsK_-de<br>🚩↓ 큐슈 플러스반자유팩 체험기 2탄♪♬<br>https://youtu.be/7FuqSB2MmxE?si=IQug8ztRmzB5ZkbS<br>⏰출발이 여유로운 가성비 중중패턴<br>✈이동은 편하게~ 알찬 핵심 일정(후쿠오카+유후인)<br>🍣먹고 싶은 것 마음대로 즐기는 식도락여행<br>🔥1일차 자유로 즐기는 반자유팩<br>♨인기온천호텔 1박과 노미호다이(음료무제한)타임<br>📌유류, 가이드경비 불포함으로 별도 추가됩니다<br>📌10명부터 쓰루가이드 동행입니다.<br>📌선착순 6명 한정 특가 이후 금액 인상됩니다. 예약 서둘러주세요~<br>✈️항공스케줄<br>🛫부산-후쿠오카 : BX146편 14:00-14:50<br>🛬후쿠오카-부산 : BX145편 16:05-17:05<br>🤍큐슈항공&amp;선박: 서예진 사원<br>T. 070-8656-1555 / tourpon009@nate.com<br>[투어폰 일본 1:1실시간 상담 &amp; 예약]<br>http://pf.kakao.com/_Jxgxkld/chat<br>https://band.us/band/63384884/post/21589</p>
+          
+        </div>
+      </div>
+    
+      <div id="card-10" class="card" onclick="toggleCard(10)">
+        <img src="https://coresos-phinf.pstatic.net/a/3773e2/1_jeiUd018svc1wa052kugt0uj_rydbxb.jpg" alt="Post image">
+        <p class="excerpt">오사카/나라/고베/교토/우지 or 유니버셜 3박4일<br>여유로운 일정으로 알차게 즐겨요❤️<br>💁🏻‍♀️체크 포인트<br>✔짧은 비행 시간으로 언제 가도 부담 없이!<br>...</p>
+        <div class="card-content">
+          <p>오사카/나라/고베/교토/우지 or 유니버셜 3박4일<br>여유로운 일정으로 알차게 즐겨요❤️<br>💁🏻‍♀️체크 포인트<br>✔짧은 비행 시간으로 언제 가도 부담 없이!<br>✔여유로운 3박4일 일정 <br>✔스시,돈카츠,스키야키 등 다양한 먹거리가 한가득<br>✔아름다운 자연경관, 현대적인 도시가 공존하는 오사카/교토<br>✔지친 몸을 따뜻하게 녹여줄 온천욕 일정까지~!<br>✔세계적인 테마파크 유니버셜 스튜디오 재팬 일정 변경 가능<br>💁🏻‍♀️항공 스케줄 <br>★에어부산 중중패턴 여유로운 3박4일 스케줄 ★<br>✈부산-오사카 : BX126편 11:30~ 13:00<br>✈오사카-부산 : BX125편 14:00~ 15:35<br>[투어폰 일본 1:1실시간 상담 &amp; 예약]<br>http://pf.kakao.com/_Jxgxkld/chat</p>
+          <img src="https://coresos-phinf.pstatic.net/a/378126/9_93eUd018svc1w6zz1l6s0yba_rydbxb.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37812j/9_b3eUd018svc1f0pmcjmusbdz_rydbxb.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781bc/9_c3eUd018svccxmb3wc4399r_rydbxb.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378103/9_e3eUd018svc1h6fcenh6f0ht_rydbxb.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-11" class="card" onclick="toggleCard(11)">
+        <img src="https://coresos-phinf.pstatic.net/a/378127/e_33dUd018svc17iy6weko1ba8_c5zb58.jpg" alt="Post image">
+        <p class="excerpt">베트남 여행 NO.1다낭🌟<br>💥💥2024년 11월 - 2025년 3월까지 💥💥<br>발권 : 9월 26일 발권 조건 <br>💓노팁+노옵션+핫스프링파크(누이딴따이)💓...</p>
+        <div class="card-content">
+          <p>베트남 여행 NO.1다낭🌟<br>💥💥2024년 11월 - 2025년 3월까지 💥💥<br>발권 : 9월 26일 발권 조건 <br>💓노팁+노옵션+핫스프링파크(누이딴따이)💓<br>🔥독박투어2 소개 여행지 핫스프링파크🔥<br>쌀쌀해지는 다낭에서 따뜻한 온천과 워터파크까지 <br>🔥세계문화유산 &#39;호이안&#39; <br>🔥산 정상 작은 유럽 &#39;바나산 테마파크&#39;<br>다낭을 모두 즐겨 보세요!<br>[에어부산으로 하늘길도 편안하게 다낭까지~!]<br>🛫항공 스케쥴🛬<br>🛫부산-다낭 BX773 21:00-00:05 (+1)<br>🛬다낭-부산 BX774 01:05-07:30<br>많은 문의 부탁드립니다 ^^*<br>☎️담당: 박동욱 과장 070-8656-0207<br>NATE ON : tourpon203@nate.com<br>[투어폰 동남아 1:1실시간 상담 &amp; 예약]<br>http://pf.kakao.com/_KIgld</p>
+          <img src="https://coresos-phinf.pstatic.net/a/3781e7/g_i3dUd018svc1iam0o2t3dkkr_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781hg/g_j3dUd018svc18jyfhf0z75jm_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781e5/0_d3eUd018svcy8dbjwa0zvh6_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378133/7_j3eUd018svc1m93nw6ozcks7_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781f4/8_43eUd018svc1qdiypw8z8wda_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781ie/8_83eUd018svc1t6o6byyfseb0_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781fj/8_93eUd018svc7qnyjz4fdpr2_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781e1/8_a3eUd018svcc1va2ay2jssc_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781f4/8_b3eUd018svc9cmrmq8a12jp_c5zb58.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-12" class="card" onclick="toggleCard(12)">
+        <img src="https://coresos-phinf.pstatic.net/a/3781d3/g_432Ud018svckuef8baqoax9_svko92.jpg" alt="Post image">
+        <p class="excerpt">🎉 "9~12월 괌 호텔별 PKG상품!!" 🎉<br>✨ 호텔조식  + 시내관광 + 왕복픽업✨<br>🎁 원하는 호텔을 PICK해서 🎁<br>💫 여행의 퀄리티를 높이고, 가격...</p>
+        <div class="card-content">
+          <p>🎉 "9~12월 괌 호텔별 PKG상품!!" 🎉<br>✨ 호텔조식  + 시내관광 + 왕복픽업✨<br>🎁 원하는 호텔을 PICK해서 🎁<br>💫 여행의 퀄리티를 높이고, 가격은 낮추고! 💫<br>🎀 오늘이 최저가!! 1,069,000부터~~🎀<br>⭐ 9/27일까지 선발권 조건⭐<br>📌상품 포인트<br>⭐7가지의 리조트 중 선택가능!!<br>⭐전 일정 조식 포함하여 레잇체크아웃으로 편안한 일정!!<br>⭐아일랜드 투어 포함으로 아름다운 괌 시내 관광!!<br>⭐왕복 픽업포함으로 공항 호텔이동을 편안하게!!<br>✈️진에어 부산 - 괌 항공 스케쥴✈️<br>👉24년하계(10/25일까지)<br>LJ923 부산 21:00 - 괌 02:00 +1<br>LJ924 괌 03:00 - 부산 06:15<br>👉24년동계(10/26부터)<br>LJ921 부산 20:00 - 괌 01:10 +1<br>LJ924 괌 02:20 - 부산 06:05<br>☎️담당: 엄세안 과장 070-8656-1505<br>카톡 1:1 문의💛<br>카톡채널 "투어폰동남아"로 문의주시면 예약과 상담 가능합니다.<br>채널 추가 후 채팅 부탁드립니다~<br>http://pf.kakao.com/_KIgld</p>
+          <img src="https://coresos-phinf.pstatic.net/a/3781ih/1_063Ud018svcrlmf4gtau3fr_svko92.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37810e/d_735Ud018svcop0zkf225zhq_svko92.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781gd/d_835Ud018svccmjhdjb98uf_svko92.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378131/d_b35Ud018svc1ppe5lmntngnl_svko92.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781db/g_93dUd018svcxde0lhs20bwg_svko92.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/377a0c/6_c5bUd018svc9y8ou8gd87i2_svko92.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378172/d_362Ud018svc1mvfq2kmmncrw_svko92.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781db/d_562Ud018svce73341fvrhq4_svko92.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781g8/d_862Ud018svc1s4ajzfkct03z_svko92.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-13" class="card" onclick="toggleCard(13)">
+        <img src="https://coresos-phinf.pstatic.net/a/3781e8/f_82eUd018svcu88w28y2xt8_hgzymg.jpg" alt="Post image">
+        <p class="excerpt">😎홋카이도! 싸GO! 편하게 여행가자GO!<br>💜북해도💜 실속(온천1박+시내2박)<br>🔥선착순특가🔥타사대비 초저가🔥<br>🧡실속알짜팩🧡779,000원~<br>-삿...</p>
+        <div class="card-content">
+          <p>😎홋카이도! 싸GO! 편하게 여행가자GO!<br>💜북해도💜 실속(온천1박+시내2박)<br>🔥선착순특가🔥타사대비 초저가🔥<br>🧡실속알짜팩🧡779,000원~<br>-삿포로+시코츠코+오타루+도야+노보리베츠<br>-내맘대로 자유식 1회<br>⭐10/5(토) &amp; 10/11(금) &amp; 10/24(목)⭐<br>💝딱 세날짜만 4명부터 화과자 증정<br>🚨10/5(토) 출발임박🚨<br>🌈관광+온천+자연을 한번에~<br>-운하를 따라 이국적인 유럽감성 오타루<br>-홋카이도 3대 경관으로 아름다운 도야 호수<br>-온천천국 신비로운 노보리베츠 지옥계곡<br>-낭만도시 삿포로<br>-홋카이의 명물 게 뷔페<br>🍂선선한 10월의 북해도<br>-삿포로의 10월 평균 최저기온은 7℃, 평균 최고기온이 16℃이며 한국의 11월 날씨와 비슷합니다. 한국보다 기온이 조금 더 낮아서 적당한 외투 준비를 추천합니다.<br>📌유류세, 가이드경비 별도 추가됩니다.<br>📌붉은 날짜 = 출발확정일<br>✈항공스케줄<br>🛫부산-치토세 : BX182편 09:05-11:40<br>🛬치토세-부산 : BX181편 12:40-15:30<br>담당 : 김현명대리 ☎️070-8656-1404<br>💛카톡 1:1 문의💛<br>카톡채널 "투어폰일본"으로 문의주시면 예약과 상담 가능합니다.<br>채널 추가 후 채팅 부탁드립니다~<br>http://pf.kakao.com/_Jxgxkld/chat</p>
+          <img src="https://coresos-phinf.pstatic.net/a/378122/0_02fUd018svc1ps0tjaryat3m_hgzymg.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37811a/j_g2eUd018svc1uj6ll29lw906_hgzymg.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781ei/j_h2eUd018svc11m7m4n9bctqk_hgzymg.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781af/1_h2fUd018svcbtlqm6m1gea1_hgzymg.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37819g/1_i2fUd018svc1t69xxw83xqnl_hgzymg.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781ai/1_j2fUd018svc19nu8l9yelibq_hgzymg.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781dj/2_12fUd018svc1j0ke776lqqwv_hgzymg.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37817g/2_22fUd018svcrhs17a52b1jm_hgzymg.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37815b/2_32fUd018svc14qjtog2c8ao8_hgzymg.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-14" class="card" onclick="toggleCard(14)">
+        <img src="https://coresos-phinf.pstatic.net/a/37802c/8_2jdUd018svc14hpsamssrxh8_qtzf5s.jpg" alt="Post image">
+        <p class="excerpt">🚩 태국 골프의 모든 것, 바로 여기에 있습니다.<br>🎉 태국 골프 동계시즌(11월 ~ 3월) 상품 오픈 🎉<br>✅ &#39;백발백중&#39; 가장 중요한 팀 컬러에 맞게...</p>
+        <div class="card-content">
+          <p>🚩 태국 골프의 모든 것, 바로 여기에 있습니다.<br>🎉 태국 골프 동계시즌(11월 ~ 3월) 상품 오픈 🎉<br>✅ &#39;백발백중&#39; 가장 중요한 팀 컬러에 맞게 추천드립니다.<br>✅ 다년간 직접 검증한 상품 &#39;만&#39; 판매<br>✅ 정확한 안내(&#39;일단 가세요&#39; 하지 않습니다.)<br>✔️ 태국 골프 정말 한팀 한팀 신경써서 행사합니다.<br>✔️ 9월 26일 내 발권 조건 동계 정규 상품가 입니다.<br>✈항공 : 에어부산<br>BX725 부산-방콕 1800-2145<br>BX726 방콕-부산 2255-0620<br>✔그 외 궁금한 사항은 여행사로 문의바랍니다.<br>골프 담당 : ☎ 051-462-5253<br>[1:1실시간 상담 &amp; 예약]<br>http://pf.kakao.com/_kUTxej/chat</p>
+          <img src="https://coresos-phinf.pstatic.net/a/3781bb/b_903Ud018svc14oah5hvo1dtn_qtzf5s.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781dg/c_i03Ud018svc1qpnzbdac6o34_qtzf5s.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781id/g_i03Ud018svcwsf42w5afttz_qtzf5s.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781h2/i_303Ud018svcf9652h8ivt0_qtzf5s.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781aa/6_b05Ud018svc17l8qqpxk4x9y_qtzf5s.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37816f/7_705Ud018svc173qgzrih6h3y_qtzf5s.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37816c/8_105Ud018svc10gg1r1xzm63q_qtzf5s.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781ac/6_d21Ud018svc1kodujspi8axa_qtzf5s.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378148/2_92aUd018svch8ekc11m332h_qtzf5s.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-15" class="card" onclick="toggleCard(15)">
+        <img src="https://coresos-phinf.pstatic.net/a/3781f5/4_d24Ud018svc1tte7fkoz6wk1_qnd77x.jpg" alt="Post image">
+        <p class="excerpt">가을,겨울 선선해지면 생각나는 큐슈<br>아침 일찍부터 즐기고 싶다면 조/석 료칸팩<br>내 맘대로 즐기는, 식도락여행 중/중 반자유팩<br>🍁가을엔 큐슈 가슈~🍂<br>💛꽉...</p>
+        <div class="card-content">
+          <p>가을,겨울 선선해지면 생각나는 큐슈<br>아침 일찍부터 즐기고 싶다면 조/석 료칸팩<br>내 맘대로 즐기는, 식도락여행 중/중 반자유팩<br>🍁가을엔 큐슈 가슈~🍂<br>💛꽉-찬 조석 료칸팩 VS 여유로운 반자유 중중팩💛<br>✈항공: 아침출발-저녁도착 조석패턴 VS 여유롭게 출발가능한 중중패턴<br>🏣호텔: 료칸식 온천호텔 1박+ 시내1박<br>🛍쇼핑: 신축 쇼핑몰 방문으로 자유로운 쇼핑<br>📢일정: 꽉-찬 다양한 관광지(조/석) VS 내 맘대로 즐기는 반자유 일정(중/중)<br>✈️항공스케줄(조/석)<br>🛫부산-후쿠오카 : BX142편 09:55-10:50<br>🛬후쿠오카-부산 : BX143편 19:40-20:30<br>✈️항공스케줄(중/중)<br>🛫부산-후쿠오카 : BX146편 14:00-14:50<br>🛬후쿠오카-부산 : BX145편 16:05-17:05<br>조석 료칸팩<br>https://band.us/band/63384884/post/21622<br>중중 반자유팩<br>https://band.us/band/63384884/post/21589<br>🤍큐슈항공&amp;선박: 서예진 사원<br>T. 070-8656-1555 / tourpon009@nate.com<br>[투어폰 일본 1:1실시간 상담 &amp; 예약]<br>http://pf.kakao.com/_Jxgxkld/chat</p>
+          
+        </div>
+      </div>
+    
+      <div id="card-16" class="card" onclick="toggleCard(16)">
+        <img src="https://coresos-phinf.pstatic.net/a/377ii1/4_b9gUd018svce622vb4gcxmo_c5zb58.jpg" alt="Post image">
+        <p class="excerpt">🎉부산-발리직항 10월 30일 취항확정🎉<br>발권기한: 9월 26일 발권<br>누구나 꿈꾸는 여행지,<br>발리(BALI) 로 떠나보세요~!<br>24년 10월 30일 시작으...</p>
+        <div class="card-content">
+          <p>🎉부산-발리직항 10월 30일 취항확정🎉<br>발권기한: 9월 26일 발권<br>누구나 꿈꾸는 여행지,<br>발리(BALI) 로 떠나보세요~!<br>24년 10월 30일 시작으로 2025년 3월까지!! <br>월,수 - 4박 6일 일정 <br>금,일 - 3박 5일 일정<br>✅발리의 핫플레이스 우붓 관광<br>✔️예술문화와 예쁜 장식품들을 볼수 있는 우붓 명소 관광<br>(몽키포레스트/왕궁/재래시장 등)<br>✔️아름다운 연꽃사원에서 인생샷을 남길수 있는 사라스와띠 사원<br>✅발리의 대표명소에서 인생사진 남기기✌️<br>인도양을 바라보며 절벽에 세워진 울루와뚜 절벽사원<br>발리의 3대 미치로 유명한 빠당빠당 비치<br>발리 최대 테마파크인 가루다 국립공원<br>✅발리에서의 식사도 한층 업그레이드<br>저녁엔 분위기 있게 스테이크 식사 제공<br>한국인의 소울푸드, 삼겹살<br>특별한 여행지인 만큼, 특별하게~😄😀🤗<br>부담없는 🛍️쇼핑2회 와 🍛기내식(편도)이 포함~!!<br>발리여행은 발리 전문가와 상의하셔야합니다!<br>편안한 비행 ✈️에어부산과 함께~<br>✈️BX601 부산 18:10 - &gt;덴파사르 00:05<br>✈️BX602 덴파사르 01:25 -&gt; 부산 09:10<br>✅패턴 : 월.수 4박6일 / 금.일 3박5일<br>☎️담당 : 박동욱과장 070-8656-0207<br>NATE ON : tourpon203@nate.com<br>[투어폰 동남아 1:1실시간 상담 &amp; 예약]<br>http://pf.kakao.com/_KIgld<br>&lt;&lt;담당자 발리 실사 사진 (2023년)&gt;&gt;<br>&lt;바투르 화산 지프투어 일출&gt;<br>&lt;바투르 화산 지프투어&gt;<br>&lt;렘뿌양 사원&gt;<br>&lt;띠르다강가&gt;<br>&lt;따만우중&gt;<br>&lt;누사페니다&gt;<br>&lt;알하스하룸 - 발리스윙&gt;<br>&lt;누사페니다-브로큰비치&gt;<br>&lt;누사페니다-앤젤빌라봉&gt;<br>&lt;누사페니다-앤젤빌라봉&gt;<br>&lt;누사페니다 - 끌링킹비치&gt;<br>&lt;렘뿌양 사원&gt;</p>
+          <img src="https://coresos-phinf.pstatic.net/a/377ijh/7_89gUd018svc1hu0tj0llch31_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/377i57/7_a9gUd018svc1k1r2i6qws5t0_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/377i1e/7_c9gUd018svcel1sikih115n_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/374cj4/2_4a3Ud018svc18kixl82so0ls_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/374chg/2_6a3Ud018svc9i8wyybu7aog_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/374cjj/2_8a3Ud018svc1x9tj91s0s3ha_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/374c55/2_ea3Ud018svc1kqo4ae01vc2k_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/374cic/2_ga3Ud018svchf7r4ugx1z04_c5zb58.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37373a/4_i1aUd018svcsngmatw5vd6m_su8ymq.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-17" class="card" onclick="toggleCard(17)">
+        <img src="https://coresos-phinf.pstatic.net/a/3781ea/0_d1iUd018svc1jydkhqkfwkkk_qufiuo.jpg" alt="Post image">
+        <p class="excerpt">🌝보홀 추석상품 안내🌝<br>고민하는 순간 좌석이 사라져요💫<br>9/13,14 추석에는 보홀로 떠나보세요~❣<br>🚨마감임박!! 선착순 한정🚨<br>9/14 보홀 추석 ...</p>
+        <div class="card-content">
+          <p>🌝보홀 추석상품 안내🌝<br>고민하는 순간 좌석이 사라져요💫<br>9/13,14 추석에는 보홀로 떠나보세요~❣<br>🚨마감임박!! 선착순 한정🚨<br>9/14 보홀 추석 초특가 999,000원<br>합리적인 가격으로 만나는 더스토리 리조트부터<br>한국인이 가장 많이 찾는 헤난 리조트까지<br>청정자연 보홀에 매력에 빠져보세요~❣<br>👉 가이드와 함께하는 편안한 세미PKG<br>👉 내맘대로 일정 DIY!! 노쇼핑/노옵션 자유상품<br>✈️에어부산 항공 스케쥴✈️<br>BX703 부산 21:30 - 보홀 00:05 +1<br>BX704 보홀 01:45 - 부산 07:05<br>☎️문의 및 담당: 강다영 사원 070-8656-0251<br>NATE ON : tourpon201@nate.com<br>[1:1실시간 상담 &amp; 예약]<br>http://pf.kakao.com/_KIgld</p>
+          <img src="https://coresos-phinf.pstatic.net/a/37810e/7_220Ud018svcnfphzw3nrja9_qufiuo.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37817g/7_020Ud018svcjpysp493qw3e_qufiuo.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781je/b_g20Ud018svc1dmarge2bjwur_qufiuo.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378182/b_f20Ud018svcnptdcnlwzhyp_qufiuo.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-18" class="card" onclick="toggleCard(18)">
+        <img src="https://coresos-phinf.pstatic.net/a/377de9/i_d4fUd018svc1i6vbjp8wvw3r_1i09l9.jpg" alt="Post image">
+        <p class="excerpt">💙오션블루, 끝없이 펼쳐진 바다 <br>❤️키친에서 풍겨오는 향긋한 음식들<br>🧡나를 감싸는 따듯한 햇살들<br>💛와서 온천욕과 함께 오키나와를 즐기세요~~<br>✨10월,...</p>
+        <div class="card-content">
+          <p>💙오션블루, 끝없이 펼쳐진 바다 <br>❤️키친에서 풍겨오는 향긋한 음식들<br>🧡나를 감싸는 따듯한 햇살들<br>💛와서 온천욕과 함께 오키나와를 즐기세요~~<br>✨10월, 6명 이상 예약시 팀당 10만원 할인<br>🎁 핵심 포인트 🎁 <br>1. 2시간 거리의 짧은 비행 시간 <br>2. 온천 1박(바다가 보이는 천연 온천욕 무료!)<br>3. 탁 트인 해변 감상할 수 있는 우미카지테라스<br>4. 오키나와에서 가장 큰 테마파크 오키나와 월드<br>5. 전통주를 주조하는 아와모리 공장 마사히로주조<br>6. 옛날 해외 무역 거점인 나하항을 볼 수 있는 슈리성<br>7. 오키나와 절정 해안절벽 만좌모<br>8. &#39;아름다운 바다&#39;라는 뜻의 츄라우미 수족관과 돌고래쇼<br>9. 미국 분위기를 본뜬 쇼핑 및 엔터테인먼트 아메리칸 빌리지<br>10. &#39;나하의 부엌&#39; 오키나와의 대형 시장 마키시 공설시장<br>11.  전일정 식사<br>📅 진에어 데일리운항 ( 2024년 11월~2025년 3월)<br>✔ 11월~3월 3박4일<br>🛫부산 08:00 - 오키나와 10:05<br>🛬오키나와 11:05- 부산 - 13:05<br>❤️많은 문의 부탁 드립니다.❤️<br>투어폰 정성원 사원<br>TEL:070-8656-1121<br>E-MAIL : tourpon206@nate.com<br>[투어폰 일본 1:1실시간 상담 &amp; 예약]<br>http://pf.kakao.com/_Jxgxkld/chat</p>
+          <img src="https://coresos-phinf.pstatic.net/a/376jje/8_g9jUd018svcny9a1emrflgp_1i09l9.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376jd8/8_i9jUd018svc12bqu6qclc6nr_1i09l9.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/377de4/b_d38Ud018svc9expws4xy0z2_1i09l9.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/377d0j/b_f38Ud018svcsr7va308xqfh_1i09l9.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/36h57b/e_71iUd018svc1azx3000h7v0a_rydbxb.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/36h531/b_71iUd018svc1tlazjwwu3m0a_rydbxb.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/36h507/e_f1iUd018svcmyhx8gaxwgg9_rydbxb.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/36h513/e_i1iUd018svc1o7ku44epmz8l_rydbxb.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/36h51b/f_01iUd018svc1wq6ejfxq2yr2_rydbxb.png" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-19" class="card" onclick="toggleCard(19)">
+        <img src="https://coresos-phinf.pstatic.net/a/378123/d_306Ud018svc7530qfzn3cye_bbtiv2.jpg" alt="Post image">
+        <p class="excerpt">마카오/홍콩 선발요금 <br>이번 휴가는 남녀노소👨‍👩‍👧‍👦즐길 수 있는 마카오/홍콩으로!!<br>💜세계유네스코 마카오<br>💙동양과 서양 현대와 과거가 공존하는 홍콩...</p>
+        <div class="card-content">
+          <p>마카오/홍콩 선발요금 <br>이번 휴가는 남녀노소👨‍👩‍👧‍👦즐길 수 있는 마카오/홍콩으로!!<br>💜세계유네스코 마카오<br>💙동양과 서양 현대와 과거가 공존하는 홍콩<br>상품가는 예약이 늦을수록 비싸집니다😥😥<br>자유시간 보장!! 아름다운 마카오 매력에 흠뻑빠지는 마똑 상품<br>한번에 두마리 토끼잡기 상품! 알찬 마카오+홍콩 마홍상품<br>잊을 수 없는✨ 홍콩/마카오에서의 추억 만들기!!!<br>단독팩 / 인센문의 대환영입니다!<br>매주 금,일 2박 4일 /화 3박 5일<br>부산-마카오 BX381 22:05-00:40+1<br>마카오-부산 BX382 01:50-06:20<br>http://pf.kakao.com/_ucxkld/chat<br>문의) 투어폰 박경연 :070-8656-1406 / tourpon004@nate.com</p>
+          <img src="https://coresos-phinf.pstatic.net/a/3781c3/9_i06Ud018svc34ocii1xa7x4_bbtiv2.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781ea/9_j06Ud018svcnjhamnfcjxuc_bbtiv2.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781j8/a_006Ud018svc1ewu2emvbos1k_bbtiv2.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/37817c/a_206Ud018svc15s9wf1f5vv4m_bbtiv2.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3781e4/a_306Ud018svc16aaike825jf_bbtiv2.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/378151/a_506Ud018svcz9e246znf9x_bbtiv2.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-20" class="card" onclick="toggleCard(20)">
+        <img src="https://coresos-phinf.pstatic.net/a/376j4g/9_0e8Ud018svc1neigjnuju00v_upy5b4.png" alt="Post image">
+        <p class="excerpt">* 단독 최소출발 10명 행사 진행 *<br>*** 대한항공 부산유럽연합 ***<br>&lt; 트립어드바이저에서 3년 연속 세계 최고의 여행지 1위로 선정 &gt;<br>**** ...</p>
+        <div class="card-content">
+          <p>* 단독 최소출발 10명 행사 진행 *<br>*** 대한항공 부산유럽연합 ***<br>&lt; 트립어드바이저에서 3년 연속 세계 최고의 여행지 1위로 선정 &gt;<br>****  [품격] 두바이 + 아부다비 6일 KE ****<br>( NO TIP, NO OPTION, NO SHOPPING )<br> 상품가<br>성인 : 3,190,000원 -(P/P) - 11월 21일, 3월 13일<br>성인 : 3,290,000 원-(P/P) - 1월 16일, 2월 6일<br>※ 싱글차지 전 일정 450,000원<br>※ 아동요금(만 12세 미만) :성인의 95% 적용<br>※ 부산-서울 국내선 미탑승시에는 160,000원 인하됩니다<br> 항공사: 대한항공(KE) : 부산-인천 왕복 내항기 포함<br> 포함사항 및 특전사항<br>▶ 항공료 + TAX, 유류할증료, 부산-인천 내항기<br>▶ 4성급 OR 5성급 호텔 및 아메리칸 조식<br>▶ 인원별 차량 이용<br>▶ 일정상의 포함된 입장료 및 식사<br>▶ 가이드/기사/식당 TIP, 식당에서의 물 값<br>▶ 두바이 프레임[내부]<br>▶ 아브라 수상택시 탑승<br>▶ 팜주메이라 전망대 [내부]<br>▶ 사막 사파리투어 포함(가이드 미동행)<br>▶ 루브르 박물관 [내부]<br>▶ 에미레이츠 팔레스 호텔 금커피 제공<br>▶ 세계에서 6번째로 큰 모스크 그랜드모스크[내부]<br>▶ 버즈칼리파 전망대(124&amp;125)에 올라 두바이 전경 감상<br>▶ 여행자 보험<br> 불포함사항<br>▶ 추후 변동되는 유류할증료<br>▶ 호텔 객실 팁 &amp; 개인경비, 물값<br>◇ 인솔자 동행 없음.  두바이공항에서 가이드미팅<br>◇  1억 해외여행자 보험 <br>📱 문의 : ☎051-463-1155실장 정미영, 과장 정지현<br>             CP 010-3834-6368  소장 권영철  <br>1. 버즈칼리파<br>2. 음악분수쇼<br>3. 두바이몰<br>4. 버즈알아랍호텔<br>5. 두바이왕궁<br>6. 두바이프레임<br>7. 아브라<br>8. 에미레이츠몰<br>9. 팜주메이라전망대에서의 전경<br>10. 사막사파리<br>11. 그랜드모스크<br>12. 에미레이트팰리스호텔<br>13. 루브르아부다비<br>14. 마리나몰<br>15. 아랍에미레이트 대통령궁</p>
+          <img src="https://coresos-phinf.pstatic.net/a/376j9i/i_de8Ud018svc12n6jop1dw7g1_upy5b4.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376ji2/2_ie9Ud018svcls1yv0ldhaf8_upy5b4.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376jf3/7_9e9Ud018svc1x1j6zmcwy6xa_upy5b4.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376jdc/c_ge9Ud018svci7xf2vksxh49_upy5b4.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376jh7/h_0e9Ud018svc2vbtbo5cwopz_upy5b4.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376j8h/0_4eaUd018svc1h9orgo7l256t_upy5b4.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376j2g/8_heaUd018svc16ig7hwauvy52_upy5b4.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376jjj/i_jeaUd018svc9ngidtjge1ne_upy5b4.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/376j2d/2_aebUd018svc1hlpn02c3pc5y_upy5b4.png" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-21" class="card" onclick="toggleCard(21)">
+        <img src="https://coresos-phinf.pstatic.net/a/30ijf2/5_af7Ud018svc1t8b4uqevtpl1_rwa342.jpg" alt="Post image">
+        <p class="excerpt">** [믿고 선택하는 가성비 최고의 베스트상품]  **<br>◈[정통] 동유럽 3국 9일 KE(체코/오스트리아/헝가리)◈<br>💂 출발일:<br>상품가 : 3,690,000원 -...</p>
+        <div class="card-content">
+          <p>** [믿고 선택하는 가성비 최고의 베스트상품]  **<br>◈[정통] 동유럽 3국 9일 KE(체코/오스트리아/헝가리)◈<br>💂 출발일:<br>상품가 : 3,690,000원 - 11월 06, 20일<br>※ 유류할증료는 포함되어 있습니다<br>※ 싱글차지 : 전 일정 500,000원 입니다<br>※ 아동(만 12세 미만) : 성인의 95% 적용<br>※ 부산-인천 왕복 내항기 미탑승시에는 160,000원 인하됩니다<br>💂<br>[상품 특전]<br>▶ 항공료 + TAX, 유류할증료, 부산-인천 국내선<br>▶ 일급 호텔 및 아메리칸 조식<br>▶ 대형 버스 45인승<br>▶ 일정상의 포함된 입장료 및 식사<br>▶ 전 일정 개인 수신기 제공(단, 이어폰&amp;충전기 제외)<br>▶ 1억 해외여행자 보험<br>▶ 아름다운 프라하 야경<br>▶ 아름다운 호수 마을인 짤츠캄머굿&amp;할슈타트 관광<br>▶ 다뉴브강 야간 유람선 탑승<br>▶ 판도르프 아울렛 자유 쇼핑(동유럽 최대)<br>▶ 쉔부른 궁전 내부<br>▶ 전통음식 – 오스트리아 호이리게, 슈니첼 / 체코 등갈비 / 헝가리 굴라쉬<br>* 불포함사항 *<br>▶ 추후 인상되는 KE항공 유류할증료<br>▶ 기사/가이드/식당TIP (전 일정 €100/인)<br>▶ 호텔 매너팁 및 기타 경비<br>💢2억 기획여행보증보험 가입업체 💢<br>💢5억 배상책임보험 가입업체 💢<br>(주)유럽으로투어<br>📱 문의 : ☎051-463-1155 실장 정미영, 과장 정지현<br>           CP 010-3834-6368 소장 권영철<br>1.부다페스트  국회의사당<br>2. 겔레르트 언덕에서 바라본 부다페스트 시내 전경<br>3. 부다페스트 어부의 요새<br>4. 합스부르크 왕가의 여름 궁전 쉔부른 궁전<br>5. 비엔나 시청사<br>6. 아름다운 동화 같은 알프스 호수 마을 할슈타트<br>7.  미라벨 정원 &amp; 호엔 짤쯔부르그 성<br>8. 독특한 문양의 간판으로 유명한 게라이데 거리<br>9. 세계문화 유산으로 지정된 중세도시 체스키크롬로프<br>10.  천년의 고도 프라하<br>11. 1402년에 완공된 유서 깊은 프라하 카를교<br>12.유럽3대 야경인  프라하 야경<br>13. 일정표</p>
+          <img src="https://coresos-phinf.pstatic.net/a/30ijhd/0_gf8Ud018svc1ckpr875jigg9_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij2f/6_ff9Ud018svc4gmkmdrrynvr_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ijd0/b_efaUd018svcqvlp6q3k0wv0_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij95/3_hfbUd018svc10xdnotfhzxq9_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij78/8_2fcUd018svcmaiuuiw6g129_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij1g/f_ifcUd018svckhlz01vw358z_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij3g/7_ifdUd018svc1hazu4b4iatx3_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij70/a_5fgUd018svcdb6o5h10prb5_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ijj1/2_ifhUd018svc1m1tdt0c5sa6_rwa342.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-22" class="card" onclick="toggleCard(22)">
+        
+        <p class="excerpt">🔹🔹🔹 출발 확정 및 예정 상품 🔹🔹🔹<br>&lt;공통사항&gt;<br>[대한항공:부산내항기+인솔자동행+단독행사]<br>인천출발시 160,000원 차감 (최소출발인원 ...</p>
+        <div class="card-content">
+          <p>🔹🔹🔹 출발 확정 및 예정 상품 🔹🔹🔹<br>&lt;공통사항&gt;<br>[대한항공:부산내항기+인솔자동행+단독행사]<br>인천출발시 160,000원 차감 (최소출발인원 15명)<br>각상품별 다른 모객중인 날짜 있습니다<br>[품격]서유럽 3국 9일 KE(프스이) - 컴 50만원<br>6,090,000 - 10/16(10명)<br>5,790,000 - 11/04(4명)<br>5,690,000 - 02/24(8명)<br>[정통] 동유럽 3국 9일 KE_(체코/오스트리아/헝가리) - 컴 40만원<br>3,990,000원 - 9/20, 10/7(7명)<br>4,790,000원 - 9/14(19명) ---- 추석상품<br>[정통]크동 5개국 9일 KE(헝/체/오/슬/크) - 컴 40만원<br>4,690,000원 - 9/18(11명) ---- 추석상품<br>* 튀르키예(터키)일주 9일 KE *(인솔자없음) - 컴 20만원<br>2,290,000(중간항공1회) - 9/23(10명)<br>** 2억 기획여행보증보험 가입업체 **<br>** 5억 배상책임보험 가입업체 **<br>(주)유럽으로투어<br>TEL:051-463-1155 정미영실장, 정지현과장<br>C.P:010-3834-6368 권영철소장</p>
+          
+        </div>
+      </div>
+    
+      <div id="card-23" class="card" onclick="toggleCard(23)">
+        
+        <p class="excerpt">&lt;&lt;추석상품&gt;&gt;<br>&lt;공통사항&gt;<br>[대한항공:부산내항기+인솔자동행+단독행사]<br>인천출발시 160,000원 차감 (최소출발인원 15명)<br...</p>
+        <div class="card-content">
+          <p>&lt;&lt;추석상품&gt;&gt;<br>&lt;공통사항&gt;<br>[대한항공:부산내항기+인솔자동행+단독행사]<br>인천출발시 160,000원 차감 (최소출발인원 15명)<br>각상품별 다른 모객중인 날짜 있습니다 <br>[정통] 동유럽 3국 9일 KE_(체코/오스트리아/헝가리) - 컴 40만원<br>4,790,000원 - 9/14(19명) ---- 추석상품 : 3석여유<br>[정통]크동 5개국 9일 KE(헝/체/오/슬/크) - 컴 40만원<br>4,690,000원 - 9/18(11명) ---- 추석상품<br>[정통] 발칸 2국 &amp;동유럽 4국 11일 KE(독&amp;체&amp;오&amp;헝&amp;슬&amp;크)<br>5,290,000원 - 9월 12일 ---- 추석상품-컴 40만원<br>                                          (선착 8명 컴50만원)<br>** 2억 기획여행보증보험 가입업체 **<br>** 5억 배상책임보험 가입업체 **<br>(주)유럽으로투어<br>TEL:051-463-1155 정미영실장, 정지현과장<br>C.P:010-3834-6368 권영철소장</p>
+          
+        </div>
+      </div>
+    
+      <div id="card-24" class="card" onclick="toggleCard(24)">
+        
+        <p class="excerpt">&lt;&lt;추석상품&gt;&gt;<br>[정통]크동 5개국 9일 KE(헝/체/오/슬/크) - 컴 40만원<br>4,690,000원 - 9/18(11명)<br>[정통] 발칸 2국...</p>
+        <div class="card-content">
+          <p>&lt;&lt;추석상품&gt;&gt;<br>[정통]크동 5개국 9일 KE(헝/체/오/슬/크) - 컴 40만원<br>4,690,000원 - 9/18(11명)<br>[정통] 발칸 2국 &amp;동유럽 4국 11일 KE(독&amp;체&amp;오&amp;헝&amp;슬&amp;크)<br>5,290,000원 - 9월 12일(2명) - 컴 40만원<br>(주)유럽으로투어<br>TEL:051-463-1155 정미영실장, 정지현과장<br>C.P:010-3834-6368 권영철소장</p>
+          
+        </div>
+      </div>
+    
+      <div id="card-25" class="card" onclick="toggleCard(25)">
+        <img src="https://coresos-phinf.pstatic.net/a/31ai8e/c_aecUd018svcmuk0vf2fd2r4_rwa342.jpg" alt="Post image">
+        <p class="excerpt">[대한항공KE 상품]<br>🔹[품격] 서유럽 프랑스 / 스위스 / 이탈리아 3개국 9일🔹<br>* 단독행사(현지 조인 없음) + 김해공항에서 부터 인솔자 동행 *<br>💂 [...</p>
+        <div class="card-content">
+          <p>[대한항공KE 상품]<br>🔹[품격] 서유럽 프랑스 / 스위스 / 이탈리아 3개국 9일🔹<br>* 단독행사(현지 조인 없음) + 김해공항에서 부터 인솔자 동행 *<br>💂 [상품가]<br>성인 : 6,190,000원-(P/P) - 09월 18일, 10월 02<br>성인 : 6,090,000원-(P/P) - 10/16일<br>[품격] 서유럽 이태리/스위스/프랑스 3개국 9일<br>성인 : 5,790,000원-(P/P) - 11월 04일<br>성인 : 5,690,000원-(P/P) - 11월 18일<br>※ 유류할증료 포함되어 있습니다<br>※ 전일 싱글차지 : 600,000원-(P/P)<br>※ 아동 요금(만 12세미만) : 성인의 95% 적용<br>※ 인천 출도착시에는 160,00원-(P/P) 인하됩니다<br>💂[상품 특전]<br>😄 포함사항<br>◈ 국제선 항공료 및 TAX, 부산-인천 내항기<br>◈ 정규 일급(4성) 호텔 및 아메리칸 조식<br>※ 인터라켄은 지역 특성상 산장호텔(3성급) 숙박 진행<br>◈ 대형 버스 45~52인승<br>◈ 일정상의 포함된 입장료 및 식사<br>◈ 해외 여행자 보험<br>😄 프랑스<br>◈ 초고속 열차 T.G.V 탑승 – 파리-제네바 또는 뮐루즈<br>◈ 유럽 3대 박물관 루브르 박물관[수신기]<br>◈ 파리의 상징 에펠탑 2F 전망대<br>◈ 아름다운 세느강의 야간 유람선 탑승<br>◈ 초호화 궁전 베르샤이유 궁전<br>😉 스위스<br>아름다운 알프스의 명봉 “융프라우흐” 등정<br>😄 이탈리아<br>◈ 특색 있는 이탈리아 5대 도시 비교 탐방<br>밀라노 / 베니스 / 피렌체 / 피사/로마<br>◈ 베니스의 상징 곤돌라 체험(옵션 60유로 상당)<br>◈ 유럽 3대 박물관 중 하나인 바티칸 박물관[수신기]<br>◈ 더몰 프리미엄 아울렛에서 자유 쇼핑<br>😄 전통 음식 - 파리 : 달팽이 요리(전식) / 이태리 : 피자, 스파게티, 피오렌티나<br>스테이크, 베니스 불고기<br>😉 전 일정 개인 수신기 제공(이어폰, 충전기 제외)<br>😄 서유럽 전문 인솔자 동행<br>😄 불포함사항<br>▶ 가이드/기사/식당TIP (전 일정 : €100/인)<br>▶ 호텔 매너팁 및 기타 경비<br>◈ 자세한 내용은 일정표를 참조해주세요◈<br>💢2억 기획여행보증보험 가입업체 💢<br>💢5억 배상책임보험 가입업체 💢<br>많은 문의 부탁드립니다^^<br>📱 문의 : ☎051-463-1155<br>       실장 정미영  과장 정지현<br>       소장 권영철 010-3834-6368<br>1. 파리의 랜드마크 에펠탑 &amp; 세느 강<br>2. 화려함의 극치를 보여주는 베르사이유 궁전(내부)<br>3. 절대왕정의 상징 "베르사이유 궁전" 전경<br>4. 루브르박물관<br>5. 개선문<br>6. TOP OF EUROPE 융프라요흐 전망대<br>7. 융프라요흐 산악열차<br>8. 밀라도 두오모 대성당<br>9. 물의도시 베네치아 산마르코 광장<br>10. 운하의 도시 베네치아<br>11. 르네상스의 발원지 피렌체 시내 전경<br>12. 로마 콜레세움과 포로로마노 유적지<br>13. 콜로세움<br>14. 로마안의 또 다른 나라 세계에서 가장 작은 나라 바티칸 시국<br>15. 로마에서 가장 인기 있는 장소 중에 하나인 트레비 분수<br>16. 피사 두오모<br>17. 더몰아울렛</p>
+          <img src="https://coresos-phinf.pstatic.net/a/31ai68/2_0efUd018svcfmtpiqm2dr5c_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/31aig2/6_8egUd018svc1lqt64iy8k5zl_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/35id4j/5_6i9Ud018svc1kf3zoiem5cll_upy5b4.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/35id4d/7_7iaUd018svc457rq99aewln_upy5b4.gif" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/31aigi/5_9ehUd018svc1cwwtvvlvwfpx_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/35id7c/1_eiaUd018svcql0681ddii8e_upy5b4.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/31aibg/h_behUd018svchzgqgo8j6nby_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/31ai0a/6_aeiUd018svc1v9v9ntcmvt2c_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/31aihh/e_deiUd018svcz114lfbn1e37_rwa342.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-26" class="card" onclick="toggleCard(26)">
+        
+        <p class="excerpt">**** 긴급모객협조문 ****<br>[품격]서유럽 3국 9일 KE(프스이) - 컴 50만원<br>5,990,000원 - 5/24 -- 출발확정 (4석여유)<br>&lt;공통사항&...</p>
+        <div class="card-content">
+          <p>**** 긴급모객협조문 ****<br>[품격]서유럽 3국 9일 KE(프스이) - 컴 50만원<br>5,990,000원 - 5/24 -- 출발확정 (4석여유)<br>&lt;공통사항&gt;<br>[대한항공:부산내항기+인솔자동행+단독행사]<br>인천출발시 160,000원 차감 (최소출발인원 15명)<br>각상품별 다른 모객중인 날짜 있습니다<br>[품격]서유럽 3국 9일 KE(프스이) - 컴 50만원<br>6,290,000 - 7/03, 7/17<br>5,990,000 - 8/28<br>6,190,000 - 9/18<br>6,090,000 - 10/02, 10/16<br>5,790,000 - 11/04, 11/18<br>[정통] 동유럽 3국 9일 KE_(체코/오스트리아/헝가리) - 컴 40만원<br>3,790,000원 - 7/10, 8/21(8명), 10/16, 11/06, 11/20<br>3,990,000원 - 8/19, 9/04, 9/20, 10/7<br>4,290,000원 - 7/24, 8/05<br>4,490,000원 - 10/03<br>4,790,000원 - 9/14(14명) ---- 추석상품<br>[정통]크동 5개국 9일 KE(헝/체/오/슬/크) - 컴 40만원<br>3,990,000원 부터 - 상기날짜 동일<br>4,390,000원 - 7/24 ---- 여름방학상품<br>4,690,000원 - 9/18(10명) ---- 추석상품<br>* 튀르키예(터키)일주 9일 KE *(인솔자없음) - 컴 20만원<br>2,190,000(중간항공1회) - 8/26, 9/23, 10/09<br>1,990,000(버스일주) - 8/26, 9/23, 10/09<br>💢2억 기획여행보증보험 가입업체 💢<br>💢5억 배상책임보험 가입업체 💢<br>(주)유럽으로투어<br>TEL:051-463-1155 정미영실장, 정지현과장<br>C.P:010-3834-6368 권영철소장</p>
+          
+        </div>
+      </div>
+    
+      <div id="card-27" class="card" onclick="toggleCard(27)">
+        
+        <p class="excerpt">안녕하십니까<br>유럽으로투어 권영철소장입니다<br>부산 - 인천 왕복 내항기 스케줄입니다<br>필요하신 분들은 프린트하셔서 모니터에 붙여 두세요<br>똑같은 내용으로 4개를 만들...</p>
+        <div class="card-content">
+          <p>안녕하십니까<br>유럽으로투어 권영철소장입니다<br>부산 - 인천 왕복 내항기 스케줄입니다<br>필요하신 분들은 프린트하셔서 모니터에 붙여 두세요<br>똑같은 내용으로 4개를 만들어 뒀습니다<br>오늘도 화이팅하십시요!!!<br>**** 긴급모객협조문 ****<br>[품격]서유럽 3국 9일 KE(프스이) - 컴 50만원<br>5,990,000원 - 5/24(12명)<br>&lt;공통사항&gt;<br>[대한항공:부산내항기+인솔자동행+단독행사]<br>인천출발시 160,000원 차감 (최소출발인원 15명)<br>각상품별 다른 모객중인 날짜 있습니다 (괄호)-모객인원<br>[정통] 동유럽 3국 9일 KE_(체코/오스트리아/헝가리) - 컴 40만원<br>3,790,000원 - 6/26(10명), 8/21(8명)<br>4,790,000원 - 9/14(12명) ---- 추석상품<br>[정통]크동 5개국 9일 KE(헝/체/오/슬/크) - 컴 40만원<br>4,690,000원 - 9/18(10명) ---- 추석상품<br>[품격] 북유럽 3국(노르웨이/스웨덴/핀란드) KE 9일* - 컴 50만원<br>6,990,000원 - 7/30(8명)<br>(주)유럽으로투어<br>TEL:051-463-1155 정미영실장, 정지현과장<br>C.P:010-3834-6368 권영철소장</p>
+          
+        </div>
+      </div>
+    
+      <div id="card-28" class="card" onclick="toggleCard(28)">
+        <img src="https://coresos-phinf.pstatic.net/a/319a3d/h_jb8Ud018svc1vlbr68f2k95e_rwa342.jpg" alt="Post image">
+        <p class="excerpt">노 옵션, 노쇼핑 ~<br>정규 일급 호텔 숙박~<br>만족도 good!!!<br>🔹부산 내항기 이용 [품격-노 옵션, 노 쇼핑] 북유럽 3국 9일 KE🔹<br>노르웨이/스웨덴...</p>
+        <div class="card-content">
+          <p>노 옵션, 노쇼핑 ~<br>정규 일급 호텔 숙박~<br>만족도 good!!!<br>🔹부산 내항기 이용 [품격-노 옵션, 노 쇼핑] 북유럽 3국 9일 KE🔹<br>노르웨이/스웨덴/핀란드<br>💂 상품가:<br>성인 : 6,590,000원 -(P/P)  5/30, 6/18<br>성인 : 6,990,000원 -(P/P)  7/30, 8/12<br>성인 : 6,490,000원 -(P/P)  9/3<br>※ 유류할증료 2월기준 260,400원 포함 기준입니다. 인상시 요금 인상됩니다.<br>※ 싱글차지 전 일정 890,000원-(P/P)<br>※ 아동요금(만 12세 미만) : 성인의 95% 적용<br>※ 부산-서울 국내선 미 탑승시에는 156,000원-(P/P) 인하됩니다<br>[상품 특전]<br>😉 노르웨이<br>비겔란 조각공원[내부]<br>브릭스달 빙하 관광[전동차 탑승]<br>송네  &amp; 게이랑에르 피요르드<br>로맨틱 플롬열차 탑승<br>유네스코 세계문화유산 브리겐 거리<br>플뢰위엔산 전망대<br>😄 스웨덴<br>바사호 박물관[내부]<br>감라스탄 구시가지<br>스톡홀롬 시청사 [내부]<br>호화 유람선 실자라인(또는 바이킹 라인)  seaside탑승<br>😄 핀란드<br>우스펜스키 사원<br>암석교회[내부]<br>😉전 일정 정규 일급 호텔<br>- 일부지역 - 지역 특성상 산장호텔(3성급)로 진행<br>😉북유럽 전문인솔자 동행<br>😉특식 : 오슬로 연어회, 헬싱키 불고기<br>많은 문의 부탁드립니다<br>💢2억 기획여행보증보험 가입업체 💢<br>💢5억 배상책임보험 가입업체 💢<br>(주)유럽으로투어<br>☎ 051-463-1155 실장 정미영, 과장 정지현<br>CP 010-3834-6368 소장 권영철<br>1. 죽기전에 꼭 가봐야 할 자연 경관 중에 하나인 "게이랑에르 피요르드"<br>2. 게이랑에르 피요르드 칠자매 폭포<br>3. 멀리서 바라본 브릭스달 푸른빙하<br>4. 가까이에서 바라본 브릭스달 푸른빙하[전동차 타고 이동]<br>5. 세계에서 가장 긴 송네피요르드<br>6. 플롬열차 에서 잠시 내려 바라 다 본 효스 폭포<br>7.플롬열차 탑승 하여 아름다운 노르웨이 자연경관 감상<br>8. 유네스코 세계문화 유산인 브뤼겐 거리<br>9. 플뢰위엔산 전망대에서 바라 본  베르겐 시내<br>10. 오슬로 번화가인 카를요한 거리<br>11. 노르웨이 왕궁<br>12. 비겔란 조각공원<br>13. 비겔란 조각공원<br>14. 스톡홀롬 시청사<br>15. 스톡홀롬 구 시가지 감라스탄<br>16. 바사호 박물관<br>17. 스톡홀롬 - 헬싱키 SILJA LINE<br>18. 실자라인 내부<br>19. 북유럽 최대 러시아 정교회 사원인 우스펜스키 사원<br>20. 암벽에 세워진 암벽교회<br>22. 헬싱키 대성당<br>23. 이동 동선도</p>
+          <img src="https://coresos-phinf.pstatic.net/a/319aef/1_3b9Ud018svc1496vbrir12xp_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/319a45/5_1baUd018svcyqnydthf8xa5_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/319a82/2_0bbUd018svclfqor3mjzijt_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/319a2i/3_hb9Ud018svcttezznk340q1_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/319a71/8_abhUd018svc1sor62sgw05zv_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/319agh/b_iccUd018svc1d8npctn35f01_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/319968/e_969Ud018svc176gwd56itj2v_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3199ig/a_66aUd018svc1kl78pa82ibsl_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/306h8d/4_90eUd018svc1166aie3p81cn_rwa342.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-29" class="card" onclick="toggleCard(29)">
+        <img src="https://coresos-phinf.pstatic.net/a/2ji691/6_gi0Ud018svco1o7ai5zlopz_rwa342.jpg" alt="Post image">
+        <p class="excerpt">****    대한항공  부산-인천 내항기 왕복탑승    ****<br>[정통] 발칸 2국 &amp;동유럽 3국 9일 KE <br>오스트리아&amp;체코&amp;헝가리&amp;슬로...</p>
+        <div class="card-content">
+          <p>****    대한항공  부산-인천 내항기 왕복탑승    ****<br>[정통] 발칸 2국 &amp;동유럽 3국 9일 KE <br>오스트리아&amp;체코&amp;헝가리&amp;슬로베니아&amp;크로아티아<br>※ 싱글차지 : 전 일정 500,000-(P/P)원 입니다.<br>※ 아동(만 12세 미만) : 성인의 95% 적용<br>※ 인천 출도착시에는 160,000-(P/P)원 인하됩니다<br>💂상품가격 :<br>성인 : ￦3,790,000-(P/P) - 03월 18일<br>성인 : ￦3,890,000-(P/P) - 03월 27일, 4월 15일<br>성인 : ￦4,190,000-(P/P) - 04월 26일(9명모객)<br>성인 : ￦3,990,000-(P/P) - 05월 15, 29일 / 06월 12, 26일 / 07월 10일<br>성인 : ￦4,390,000-(P/P) - 07월 24일<br>[상품 특전]<br>▶ 항공료 + TAX, 유류할증료, 부산-서울 국내선<br>▶ 일급 호텔 및 아메리칸 조식<br>▶ 대형 버스 45인승<br>▶ 일정상의 포함된 입장료 및 식사<br>▶ 전 일정 개인 수신기 제공(단, 이어폰&amp;충전기 제외)<br>▶ 1억 해외여행자 보험<br>▶ 아름다운 프라하 야경<br>▶ 아름다운 호수 마을인 짤츠캄머굿&amp;할슈타트 관광<br>▶ 블래드 성 내부<br>▶ 플리트비체 국립공원<br>▶ 다뉴브강 야간 유람선 탑승<br>▶ 판도르프 아울렛 자유 쇼핑<br>▶ 쉔부른 궁전 내부<br>▶ 전통음식 – 크로아티아 송어요리 / 오스트리아 호이리게, 슈니첼<br>                 / 체코 스비치코바 / 헝가리 굴라쉬<br>[불포함 사항]<br>▶ 추후 인상되는 KE항공 유류할증료<br>▶ 기사/가이드/식당TIP (전 일정 €100/인)<br>▶ 호텔 매너팁 및 기타 경비, 식당에서의 음료비용<br>많은 문의 부탁드립니다^^<br>💢2억 기획여행보증보험 가입업체 💢<br>💢5억 배상책임보험 가입업체 💢<br>(주)유럽으로투어<br>☎  051-463-1155 실장 정미영, 대리 정지현<br>CP 010-3834-6368 소장 권영철<br>1.오스트리아 짤츠부르크 미라벨 정원<br>2. 유럽에서 가장 큰 중세시대 성 " 호엔잘츠부르크 성"<br>3.독특한 문양의 간판이 많은 게트라이데 거리<br>4. 짤쯔부르크 미라벨 정원 &amp; 호엔짤쯔부르크 성<br>5. 아름다운 알프스의 마을 할슈타트<br>6. 아름다운 슬로베니아 블레드 호수 &amp; 성<br>7. 크로아티아 플리체비체 국립공원<br>8. 플리트비체 국립공원<br>9. 자그레브의  대표 건축물인  성 마르코 교회<br>10. 자그레브시내 전경(쌍둥이 첨탑의  성슈테판 성당&amp; 광장)<br>11. 부다페스트 시내 전경<br>12. 다뉴부강에 비친 부다왕궁<br>13. 부다페스트 부다왕궁<br>14. 비엔나 쉔부른 궁전<br>15. 비엔나 시청사<br>16. 비엔나 성슈테판 성당<br>17. 프라하 천문시계 &amp; 틴교회 &amp;구 시가지<br>18. 아름다운  천년 고도의 도시 프라하<br>19. 프라하 야경<br>20. 석양이 지는 카를교<br>21. 체코 프라하 시내 전경</p>
+          <img src="https://coresos-phinf.pstatic.net/a/30abfg/0_708Ud018svc1pv8e9dk9qbpq_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3076gb/8_6bfUd018svc1x8qtlvdwfj05_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/359hbd/e_13fUd018svc1fehywv5htas7_upy5b4.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/359h9a/h_b3fUd018svcpr9yp1k8q3oo_upy5b4.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3076fd/h_1bgUd018svc1nfxgukoedqwb_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/2ji6jj/a_ii0Ud018svc1ltcxcjr3ly6_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30762c/5_2bhUd018svc1bz4da5nro6r5_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/2ji6c8/c_hi0Ud018svc1hwze7vcfix1h_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3076d9/b_gbjUd018svc1le8ziiy3pw3x_rwa342.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-30" class="card" onclick="toggleCard(30)">
+        <img src="https://coresos-phinf.pstatic.net/a/31ai8e/c_aecUd018svcmuk0vf2fd2r4_rwa342.jpg" alt="Post image">
+        <p class="excerpt">[대한항공KE 상품]<br>🔹[품격] 서유럽 프랑스 / 스위스 / 이탈리아 3개국 9일🔹<br>* 단독행사(현지 조인 없음) + 김해공항에서 부터 인솔자 동행 *<br>💂 [...</p>
+        <div class="card-content">
+          <p>[대한항공KE 상품]<br>🔹[품격] 서유럽 프랑스 / 스위스 / 이탈리아 3개국 9일🔹<br>* 단독행사(현지 조인 없음) + 김해공항에서 부터 인솔자 동행 *<br>💂 [상품가]<br>성인 : 5,890,000-(P/P)원 - 04월 16일<br>성인 : 5,990,000-(P/P)원 - 05월 08(10), 16, 22, 23(20) ,24일<br>                                      06월 05, 19일<br>                                      07월 03, 17일<br>※ 유류할증료 포함되어 있습니다<br>※ 전일 싱글차지 : 550,000원-(P/P)<br>※ 아동 요금(만 12세미만) : 성인의 95% 적용<br>※ 인천 출도착시에는 160,00원-(P/P) 인하됩니다<br>💂[상품 특전]<br>😄 포함사항<br>◈ 국제선 항공료 및 TAX, 부산-인천 내항기<br>◈ 정규 일급(4성) 호텔 및 아메리칸 조식<br>※ 인터라켄은 지역 특성상 산장호텔(3성급) 숙박 진행<br>◈ 대형 버스 45~52인승<br>◈ 일정상의 포함된 입장료 및 식사<br>◈ 해외 여행자 보험<br>😄 프랑스<br>◈ 초고속 열차 T.G.V 탑승 – 파리-제네바 또는 뮐루즈<br>◈ 유럽 3대 박물관 루브르 박물관[수신기]<br>◈ 파리의 상징 에펠탑 2F 전망대<br>◈ 아름다운 세느강의 야간 유람선 탑승<br>◈ 초호화 궁전 베르샤이유 궁전<br>😉 스위스<br>아름다운 알프스의 명봉 “융프라우흐” 등정<br>😄 이탈리아<br>◈ 특색 있는 이탈리아 5대 도시 비교 탐방<br>밀라노 / 베니스 / 피렌체 / 피사/로마<br>◈ 베니스의 상징 곤돌라 체험(옵션 60유로 상당)<br>◈ 유럽 3대 박물관 중 하나인 바티칸 박물관[수신기]<br>◈ 더몰 프리미엄 아울렛에서 자유 쇼핑<br>😄 전통 음식 - 파리 : 달팽이 요리(전식) / 이태리 : 피자, 스파게티, 피오렌티나<br> 스테이크, 베니스 불고기<br>😉 전 일정 개인 수신기 제공(이어폰, 충전기 제외)<br>😄 서유럽 전문 인솔자 동행<br>😄 불포함사항<br>▶ 가이드/기사/식당TIP (전 일정 : €100/인)<br>▶ 호텔 매너팁 및 기타 경비<br>◈ 자세한 내용은 일정표를 참조해주세요◈<br>💢2억 기획여행보증보험 가입업체 💢<br>💢5억 배상책임보험 가입업체 💢<br>많은 문의 부탁드립니다^^<br>📱 문의 : ☎051-463-1155<br>          실장 정미영  대리 정지현<br>          소장 권영철 010-3834-6368<br>1. 파리의 랜드마크 에펠탑 &amp; 세느 강<br>2. 화려함의 극치를 보여주는 베르사이유 궁전(내부)<br>3. 절대왕정의 상징 "베르사이유 궁전" 전경<br>4. 루브르박물관<br>5. 개선문<br>6. TOP OF EUROPE 융프라요흐 전망대<br>7. 융프라요흐 산악열차<br>8. 밀라도 두오모 대성당<br>9. 물의도시 베네치아 산마르코 광장<br>10. 운하의 도시 베네치아<br>11. 르네상스의 발원지 피렌체 시내 전경<br>12. 로마 콜레세움과 포로로마노 유적지<br>13. 콜로세움<br>14. 로마안의 또 다른 나라 세계에서 가장 작은 나라 바티칸 시국<br>15. 로마에서 가장 인기 있는 장소 중에 하나인 트레비 분수<br>16. 피사 두오모<br>17. 더몰아울렛</p>
+          <img src="https://coresos-phinf.pstatic.net/a/31ai68/2_0efUd018svcfmtpiqm2dr5c_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/31aig2/6_8egUd018svc1lqt64iy8k5zl_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/35id4j/5_6i9Ud018svc1kf3zoiem5cll_upy5b4.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/35id4d/7_7iaUd018svc457rq99aewln_upy5b4.gif" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/31aigi/5_9ehUd018svc1cwwtvvlvwfpx_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/35id7c/1_eiaUd018svcql0681ddii8e_upy5b4.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/31aibg/h_behUd018svchzgqgo8j6nby_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/31ai0a/6_aeiUd018svc1v9v9ntcmvt2c_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/31aihh/e_deiUd018svcz114lfbn1e37_rwa342.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-31" class="card" onclick="toggleCard(31)">
+        <img src="https://coresos-phinf.pstatic.net/a/36a7ga/j_5biUd018svcjdxpurqzxhzd_upy5b4.jpg" alt="Post image">
+        <p class="excerpt">안녕하십니까 유럽으로투어 권소장입니다<br>매우 중요한 정보 공유해 드립니다<br>유럽 각국 무비자 입국 가능및일자 &amp; 여권 유효기간에 대해서 자세히 나온 파일을 첨부합니다...</p>
+        <div class="card-content">
+          <p>안녕하십니까 유럽으로투어 권소장입니다<br>매우 중요한 정보 공유해 드립니다<br>유럽 각국 무비자 입국 가능및일자 &amp; 여권 유효기간에 대해서 자세히 나온 파일을 첨부합니다.</p>
+          <img src="https://coresos-phinf.pstatic.net/a/36a7fa/j_6biUd018svc12uuiaxwt0kux_upy5b4.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/36a7e0/j_7biUd018svcrnup41a2eujm_upy5b4.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/36a7ah/j_8biUd018svcx5zl7t6qwacj_upy5b4.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/36a7ed/j_9biUd018svc1j7a5o1erd0a1_upy5b4.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/36a7c4/j_abiUd018svcaq1atbqpemsy_upy5b4.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/36a774/j_bbiUd018svc1b87flr5f9zqm_upy5b4.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-32" class="card" onclick="toggleCard(32)">
+        
+        <p class="excerpt">💢2억 기획여행보증보험 가입업체💢<br>💢5억 배상책임보험 가입업체 💢<br>**** 모객협조문 ****<br>++ 8명이상 선발권 가능 - 상품가 문의 요망 ++<br>&...</p>
+        <div class="card-content">
+          <p>💢2억 기획여행보증보험 가입업체💢<br>💢5억 배상책임보험 가입업체 💢<br>**** 모객협조문 ****<br>++ 8명이상 선발권 가능 - 상품가 문의 요망 ++<br>&lt;공통사항&gt;<br>[대한항공:부산내항기+인솔자동행+단독행사]<br>인천출발시 160,000원 차감 (최소출발인원 15명)<br>각상품별 날짜별 요금 상이함으로 체크 요망<br>[품격]서유럽 3국 9일 KE(프스이) - 컴 500,000원<br>5,490,000원 부터 - 3/12, 4/16, 5/08(10명), 5/16, 5/22, 5/23(19명-잔여2석)<br>6/19, 7/17<br>[정통]크동 5개국 9일 KE(헝/체/오/슬/크) - 컴 400,000원<br>3,790,000원부터 - 3/27, 4/15, 4/26(9명), 5/15, 5/29, 6/12, 6/26, 7/10, 7/24<br>[정통] 동유럽 3국 9일 KE_(체코/오스트리아/헝가리) - 컴 400,000원<br>3,690,000원부터 - 3/18(12명), 3/27, 4/15, 4/18(6명), 4/26, 5/15, 5/29, 6/12, 6/26, 7/10<br>[정통]동발칸 3국 9일 KE(오/슬/크) - 컴 400,000원<br>4,090,000원부터 - 3/27, 5/15, 5/29, 6/12, 6/26, 7/10, 7/24<br>[품격]동유럽 3국 10일 KE(오/헝/체) - 컴 500,000원<br>5,890,000원 - 8/02(12명) : 노팁&amp;노옵션 상품<br>** 튀르키예(터키)일주 9일 KE 컴 200,000원 **<br>부산내항기포함(인솔자없음)<br>1,890,000(버스일주)부터 - 2/14, 3/13<br>2,149,000(중간항공1회)부터 - 2/14, 3/13, 4/17(10명)<br>(주)유럽으로투어<br>TEL:051-463-1155 정미영실장, 정지현대리</p>
+          
+        </div>
+      </div>
+    
+      <div id="card-33" class="card" onclick="toggleCard(33)">
+        <img src="https://coresos-phinf.pstatic.net/a/30ij2f/6_ff9Ud018svc4gmkmdrrynvr_rwa342.jpg" alt="Post image">
+        <p class="excerpt">** [믿고 선택하는 가성비 최고의 베스트상품]  **<br>◈[정통] 동유럽 3국 9일 KE(체코/오스트리아/헝가리)◈<br>💂 출발일:<br>    3,690,000원-(P/...</p>
+        <div class="card-content">
+          <p>** [믿고 선택하는 가성비 최고의 베스트상품]  **<br>◈[정통] 동유럽 3국 9일 KE(체코/오스트리아/헝가리)◈<br>💂 출발일:<br>    3,690,000원-(P/P) - 03월 18일(12명)<br>    3,790,000원-(P/P) - 04월 15, 18일(4명), 05월 15, 29일 / 06월 12, 26일<br>                                  / 07월 10일<br>    4,190,000원-(P/P) - 07월 24일<br>※ 3/18, 4/15일은 하기 첨부한 스케줄과 다르기 때문에 꼭 문의 바랍니다<br>※15명 모객 시 출발 확정 및 인솔자 동행<br>💂<br>[상품 특전]<br>▶ 항공료 + TAX, 유류할증료, 부산-인천 내항기<br>▶ 일급 호텔 및 아메리칸 조식<br>▶ 대형 버스 45인승<br>▶ 일정 상의 포함된 입장료 및 식사<br>▶ 전 일정 개인 수신기 제공(단, 이어폰&amp;충전기 제외)<br>▶ 여행자 보험<br>▶ 아름다운 프라하 야경<br>▶ 온천지역인 까를로비바리<br>▶ 체스키크롬로프 성 조망<br>▶ 아름다운 호수 마을인 짤츠캄머굿&amp;할슈타트 관광<br>▶ 호엔짤츠부르크성 리프트 탑승<br>▶ 비엔나의 상징 쉔부른 궁전 내부 관람<br>▶ 다뉴브강 야간 유람선 탑승<br>▶ 전통음식 – 체코 스비치코바 / 오스트리아 호이리게, 슈니첼 / 헝가리 굴라쉬<br>* 불포함사항 *<br>▶ 추후 인상되는 KE항공 유류할증료<br>▶ 기사/가이드/식당TIP (전 일정 €100/인)<br>▶ 호텔 매너팁 및 기타 경비<br>◇ 1억 해외여행자 보험<br>(주)유럽으로투어<br>💢2억 기획여행보증보험 가입업체💢<br>💢5억 배상책임보험 가입업체 💢<br>📱 문의 : ☎051-463-1155실장 정미영, 대리 정지현<br>              CP 010-3834-6368 소장 권영철<br>1. 부다페스트 어부의 요새<br>2. 부다페스트  국회의사당<br>3. 겔레르트 언덕에서 바라본 부다페스트 시내 전경<br>4. 합스부르크 왕가의 여름 궁전 쉔부른 궁전<br>5. 비엔나 시청사<br>6. 아름다운 동화 같은 알프스 호수 마을 할슈타트<br>7.  미라벨 정원 &amp; 호엔 짤쯔부르그 성<br>8. 독특한 문양의 간판으로 유명한 게라이데 거리<br>9. 세계문화 유산으로 지정된 중세도시 체스키크롬로프<br>10.  천년의 고도 프라하<br>11. 1402년에 완공된 유서 깊은 프라하 카를교<br>12.유럽3대 야경인  프라하 야경<br>13. 일정표</p>
+          <img src="https://coresos-phinf.pstatic.net/a/30ijf2/5_af7Ud018svc1t8b4uqevtpl1_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ijhd/0_gf8Ud018svc1ckpr875jigg9_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ijd0/b_efaUd018svcqvlp6q3k0wv0_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij95/3_hfbUd018svc10xdnotfhzxq9_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij78/8_2fcUd018svcmaiuuiw6g129_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij1g/f_ifcUd018svckhlz01vw358z_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij3g/7_ifdUd018svc1hazu4b4iatx3_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij70/a_5fgUd018svcdb6o5h10prb5_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ijj1/2_ifhUd018svc1m1tdt0c5sa6_rwa342.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-34" class="card" onclick="toggleCard(34)">
+        
+        <p class="excerpt">**** 모객협조문 ****<br>++ 8명이상 선발권 가능 - 상품가 문의 요망 ++<br>&lt;공통사항&gt;<br>[대한항공:부산내항기+인솔자동행+단독행사]<br>인천출발시...</p>
+        <div class="card-content">
+          <p>**** 모객협조문 ****<br>++ 8명이상 선발권 가능 - 상품가 문의 요망 ++<br>&lt;공통사항&gt;<br>[대한항공:부산내항기+인솔자동행+단독행사]<br>인천출발시 160,000원 차감 (최소출발인원 15명)<br>[품격]서유럽 3국 9일 KE(프스이) - 컴 500,000원<br>5,490,000원 부터 - 3/12, 4/16, 5/08(10명), 5/16, 5/22,<br>6/19, 7/17<br>[정통]크동 5개국 9일 KE(헝/체/오/슬/크) - 컴 400,000원<br>3,790,000원부터 - 3/27, 4/15, 4/26(9명), 5/15, 5/29, 6/12, 6/26, 7/10, 7/24<br>[정통] 동유럽 3국 9일 KE_(체코/오스트리아/헝가리) - 컴 400,000원<br>3,690,000원부터 - 3/18(12명), 3/27, 4/15, 4/18(6명), 4/26, 5/15, 5/29, 6/12, 6/26, 7/10<br>[정통]동발칸 3국 9일 KE(오/슬/크) - 컴 400,000원<br>4,090,000원부터 - 3/27, 5/15, 5/29, 6/12, 6/26, 7/10, 7/24<br>[품격]동유럽 3국 10일 KE(오/헝/체) - 컴 500,000원<br>5,890,000원 - 8/02(12명) : 노팁&amp;노옵션 상품<br>** 튀르키예(터키)일주 9일 KE 컴 200,000원 **<br>부산내항기포함(인솔자없음)<br>1,890,000(버스일주)부터 - 2/14, 3/13<br>2,149,000(중간항공1회)부터 - 2/14, 3/13, 4/17(10명)</p>
+          
+        </div>
+      </div>
+    
+      <div id="card-35" class="card" onclick="toggleCard(35)">
+        
+        <p class="excerpt">**** 모객협조문 ****<br>&lt;공통사항&gt;<br>[대한항공:부산내항기+인솔자동행+단독행사]<br>인천출발시 160,000원 차감<br>[품격]서유럽 3국 9일 KE(...</p>
+        <div class="card-content">
+          <p>**** 모객협조문 ****<br>&lt;공통사항&gt;<br>[대한항공:부산내항기+인솔자동행+단독행사]<br>인천출발시 160,000원 차감<br>[품격]서유럽 3국 9일 KE(프스이) - 컴 500,000원<br>5,490,000원 부터 - 1/09, 1/23(6명), 2/20(4명), 3/12, 4/16, 5/08(8명), 5/16, 5/22,<br>6/19, 7/17<br>[정통]크동 5개국 9일(헝/체/오/슬/크) - 컴 400,000원<br>3,790,000원부터 - 1/22, 3/27, 4/15, 4/26, 5/15, 5/29, 6/12, 6/26, 7/10, 7/24<br>[정통] 동유럽 3국 9일 KE_(체코/오스트리아/헝가리) - 컴 400,000원<br>3,690,000원부터 - 1/22, 3/18(12명), 3/27, 4/15, 4/18(6명), 4/26, 5/15, 5/29, 6/12, 6/26, 7/10<br>[정통]동발칸 3국 9일 KE(오/슬/크) - 컴 400,000원<br>4,090,000원부터 - 3/27, 5/15, 5/29, 6/12, 6/26, 7/10, 7/24<br>** 튀르키예(터키)일주 9일 컴 200,000원 **<br>부산내항기포함(인솔자없음)<br>1,890,000(버스일주)부터 - 2/14, 3/13, 4/17<br>2,149,000(중간항공1회)부터 - 2/14, 3/13, 4/17(7명)<br>(주)유럽으로투어<br>TEL:051-463-1155 정미영실장, 정지현대리<br>C.P:010-3834-6368 권영철소장</p>
+          
+        </div>
+      </div>
+    
+      <div id="card-36" class="card" onclick="toggleCard(36)">
+        
+        <p class="excerpt">**** 모객협조문 ****<br>[대한항공:부산내항기+인솔자동행+단독행사]<br>** 공통사항:인천출발시 160,000원 차감<br>[품격]서유럽 3국 9일 KE(프스이) - 컴...</p>
+        <div class="card-content">
+          <p>**** 모객협조문 ****<br>[대한항공:부산내항기+인솔자동행+단독행사]<br>** 공통사항:인천출발시 160,000원 차감<br>[품격]서유럽 3국 9일 KE(프스이) - 컴 500,000원<br>5,490,000원 부터 - 1/09, 1/23(6명), 2/20(8명), 3/12, 4/16, 5/08, 5/16, 5/22, 6/19, 7/17<br>[정통]크동 5개국 9일(헝/체/오/슬/크) - 컴 400,000원<br>3,790,000원부터 - 1/22, 3/27, 4/15, 4/26, 5/15, 5/29, 6/12, 6/26, 7/10<br>[정통] 동유럽 3국 9일 KE_(체코/오스트리아/헝가리) - 컴 400,000원<br>3,690,000원 - 1/22, 3/18(10명), 3/27, 4/15, 4/18(6명), 4/26, 5/15, 5/29, 6/12, 6/26, 7/10<br>[정통]동발칸 3국 9일 KE(오/슬/크) - 컴 400,000원<br>4,090,000원부터 - 3/27, 5/15, 5/29, 6/12, 6/26, 7/10<br>** 튀르키예(터키)일주 9일 컴 200,000원 **<br>부산내항기포함(인솔자없음)<br>1,890,000(버스일주)부터 - 2/14, 3/13, 4/17<br>2,149,000(중간항공1회)부터 - 2/14, 3/13, 4/17<br>[품격]스페인&amp;포르투칼 10일 - 컴 350,000원<br>4,699,000원 부터 - 1/22, 2/14, 3/11, 4/15<br>(주)유럽으로투어<br>TEL:051-463-1155 정미영실장, 정지현대리<br>C.P:010-3834-6368 권영철소장</p>
+          
+        </div>
+      </div>
+    
+      <div id="card-37" class="card" onclick="toggleCard(37)">
+        <img src="https://coresos-phinf.pstatic.net/a/30ijf2/5_af7Ud018svc1t8b4uqevtpl1_rwa342.jpg" alt="Post image">
+        <p class="excerpt">** [믿고 선택하는 가성비 최고의 베스트상품]  **<br>◈[정통] 동유럽 3국 9일 KE(체코/오스트리아/헝가리)◈<br>💂 출발일: <br>     상품가 : 3,690,...</p>
+        <div class="card-content">
+          <p>** [믿고 선택하는 가성비 최고의 베스트상품]  **<br>◈[정통] 동유럽 3국 9일 KE(체코/오스트리아/헝가리)◈<br>💂 출발일: <br>     상품가 : 3,690,000원부터 - 1/22, 3/18(10명), 3/27, 4/15, 4/18(6명), 4/26,<br>                                                 5/15, 5/29, 6/12, 6/26, 7/10<br>※ 유류할증료는 포함되어 있습니다<br>※ 싱글차지 : 전 일정 500,000원 입니다<br>※ 아동(만 12세 미만) : 성인의 95% 적용<br>※ 부산-인천 왕복 내항기 미탑승시에는 160,000원 인하됩니다<br>💂 <br>[상품 특전]<br>▶ 항공료 + TAX, 유류할증료, 부산-인천 내항기<br>▶ 일급 호텔 및 아메리칸 조식<br>▶ 대형 버스 45인승<br>▶ 일정 상의 포함된 입장료 및 식사<br>▶ 전 일정 개인 수신기 제공(단, 이어폰&amp;충전기 제외)<br>▶ 여행자 보험<br>▶ 아름다운 프라하 야경<br>▶ 온천지역인 까를로비바리<br>▶ 체스키크롬로프 성 조망<br>▶ 아름다운 호수 마을인 짤츠캄머굿&amp;할슈타트 관광<br>▶ 호엔짤츠부르크성 리프트 탑승<br>▶ 비엔나의 상징 쉔부른 궁전 내부 관람<br>▶ 다뉴브강 야간 유람선 탑승<br>▶ 전통음식 – 체코 스비치코바 / 오스트리아 호이리게, 슈니첼 / 헝가리 굴라쉬<br>* 불포함사항 *<br>▶ 추후 인상되는 KE항공 유류할증료(※10월 이후 변동분)<br>▶ 기사/가이드/식당TIP (전 일정 €100/인)<br>▶ 호텔 매너팁 및 기타 경비<br>◇ 1억 해외여행자 보험<br>💢2억 기획여행보증보험 가입업체💢<br>(주)유럽으로투어<br>📱 문의 : ☎051-463-1155 실장 정미영, 대리 정지현<br>          CP 010-3834-6368 소장 권영철<br>1.부다페스트  국회의사당<br>2. 겔레르트 언덕에서 바라본 부다페스트 시내 전경<br>3. 부다페스트 어부의 요새<br>4. 합스부르크 왕가의 여름 궁전 쉔부른 궁전<br>5. 비엔나 시청사<br>6. 아름다운 동화 같은 알프스 호수 마을 할슈타트<br>7.  미라벨 정원 &amp; 호엔 짤쯔부르그 성<br>8. 독특한 문양의 간판으로 유명한 게라이데 거리<br>9. 세계문화 유산으로 지정된 중세도시 체스키크롬로프<br>10.  천년의 고도 프라하<br>11. 1402년에 완공된 유서 깊은 프라하 카를교<br>12.유럽3대 야경인  프라하 야경<br>13. 일정표</p>
+          <img src="https://coresos-phinf.pstatic.net/a/30ijhd/0_gf8Ud018svc1ckpr875jigg9_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij2f/6_ff9Ud018svc4gmkmdrrynvr_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ijd0/b_efaUd018svcqvlp6q3k0wv0_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij95/3_hfbUd018svc10xdnotfhzxq9_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij78/8_2fcUd018svcmaiuuiw6g129_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij1g/f_ifcUd018svckhlz01vw358z_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij3g/7_ifdUd018svc1hazu4b4iatx3_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ij70/a_5fgUd018svcdb6o5h10prb5_rwa342.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/30ijj1/2_ifhUd018svc1m1tdt0c5sa6_rwa342.jpg" alt="Post image">
+        </div>
+      </div>
+    
+      <div id="card-38" class="card" onclick="toggleCard(38)">
+        
+        <p class="excerpt">** 긴급모객협조문 **<br>대한항공(KE) 출발상품<br>[KE부산내항기+인솔자동행+단독행사]<br>인천출발시 160,000원 차감<br>[품격]동유럽&amp; 발칸 5개국 1...</p>
+        <div class="card-content">
+          <p>** 긴급모객협조문 **<br>대한항공(KE) 출발상품<br>[KE부산내항기+인솔자동행+단독행사]<br>인천출발시 160,000원 차감<br>[품격]동유럽&amp; 발칸 5개국 11일(헝/체/오/슬/크)-출발확정<br>4,190,000원 - 9월 8일(12명) : 잔여 12석<br>현 싯점 4명 이상 예약시 컴 400,000원 + 𝛂</p>
+          
+        </div>
+      </div>
+    
+      <div id="card-39" class="card" onclick="toggleCard(39)">
+        <img src="https://coresos-phinf.pstatic.net/a/2ic50b/i_8e2Ud018svcydiy9yf0zj4o_hkgvgk.jpg" alt="Post image">
+        <p class="excerpt">* 단독 최대 23명만 행사 진행 *<br>*** 대한항공 부산유럽연합 ***<br>&lt; 동서양의 매력을 가지고 있는 터키 &gt;<br>****  터키 일주 9일 KE  **...</p>
+        <div class="card-content">
+          <p>* 단독 최대 23명만 행사 진행 *<br>*** 대한항공 부산유럽연합 ***<br>&lt; 동서양의 매력을 가지고 있는 터키 &gt;<br>****  터키 일주 9일 KE  ****<br> 상품가<br>성인 : 1,990,000원-(P/P) - 3월 13일<br>※ 싱글차지 전 일정 350,000원-(P/P) <br>※ 아동요금(만 12세 미만) :성인의 95% 적용<br>※ 부산-서울 국내선 미탑승시에는 156,000원-(P/P) 인하됩니다<br> 항공사: 대한항공(KE) : 부산-인천 왕복 내항기 포함<br> 포함사항<br>◈ 항공료 + TAX, 유류할증료, 부산-서울 내항기<br>◈ 전 일정 특급 호텔 및 아메리칸 조식<br>◈ 45인승 WI-FI 버스<br>◈ 일정상의 포함된 입장료 및 식사<br>◈ 1억 해외여행자 보험<br> 특전사항<br>◈ 성소피아 성당<br>◈ 블루모스크 내부<br>◈ 톱카프 궁전 내부관람<br>◈ 카파도키아 집중투어<br>◈ 터키 전통춤인 밸리댄스(옵션가 50유로 상당)<br>◈ 온천으로 유명한 파묵깔레에서 온천욕<br>◈ 에페소 유적지<br>◈ 돌마바흐체 궁전(옵션가 60유로 상당)<br>◈ 최대 재래시장인 그랜드 바자르<br>◈ 보스포러스 유람선 [전세선]<br>*** 전통음식 제공 ***<br>닭고기 쉬쉬 케밥, 항아리 케밥, 쿄프테 케밥, <br>이스켄델 케밥, 시미트&amp;차이<br>*불포함사항*<br>▶ 추후 변동되는 KE항공 유류할증료<br>▶ 기사/가이드/식당TIP (전 일정 €90/인)<br>20명 미만 행사 시에는 중형버스로 진행되며, 팁은 €30-(P/P) 추가됩니다<br>▶ 호텔 매너팁 및 기타 경비<br>- 매너팁은 소비자의 자율적 선택사항으로 지불여부에 따른 불이익은 없습니다<br>◇ 인솔자 동행 없음. 터키공항에서 가이드미팅<br>💢2억 기획여행보증보험 가입업체 💢<br>💢3억 배상책임보험 가입업체 💢<br>(주)유럽으로투어<br>📱 문의 : ☎051-463-1155 실장 정미영, 대리 정지현<br>CP 010-3834-6368 소장 권영철<br>1. 이스탄불 시내를 흐르는 보스포러스 해협 및 유람선 전경<br>2. 이스탄불 시내 전경<br>3. 터키를 대표하는 이슬람사원 블루모스크 야경<br>4. 카파도키아하면 열 기구가 최고죠^^<br>5. 스머프 마을의 모티브가 된 카파도키아 파샤바 계곡<br>6.터키 남부의 세계적인 지중해 휴양지 안턀라<br>7. 세기의 미인, 클레오파트라도 이곳을 찾아 온천욕을 즐겼다는 파묵깔레<br>8. 유네스코 세계문화유산인 에페소 유적지</p>
+          <img src="https://coresos-phinf.pstatic.net/a/2ic596/a_3e3Ud018svc1v1f3zabq4xhb_y9hyw5.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/2ic5ce/d_ie3Ud018svcwmigifuuxegg_p6t1bk.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/3525dd/h_gd9Ud018svcn9370xwgar5p_upy5b4.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/2ic5eg/7_8e7Ud018svc1r9vu998tyg1w_tuphb2.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/2ic54c/a_2e8Ud018svc1uel2q9fszp8d_9iyxne.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/2ic5g6/h_he8Ud018svc17pwvoe2vjr3f_cgq4c.png" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/2ic5cg/j_be8Ud018svc19qvt4208zbif_ndqyno.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/2ic58f/h_8e9Ud018svcip6ep5vv4ozi_o4u0jx.jpg" alt="Post image"><img src="https://coresos-phinf.pstatic.net/a/2ic540/i_ae9Ud018svc9e5bdy9wxrr5_3uho5u.jpg" alt="Post image">
+        </div>
+      </div>
+    </div><script>
+    var currentOpenCard = null;
 
+    function toggleCard(index) {
+      var clickedCard = document.getElementById('card-' + index);
+      
+      if (currentOpenCard && currentOpenCard !== clickedCard) {
+        currentOpenCard.classList.remove('expanded');
+        currentOpenCard.style.animation = 'none';
+        currentOpenCard.style.transform = 'scale(1)';
+      }
+      
+      clickedCard.classList.toggle('expanded');
+      
+      if (clickedCard.classList.contains('expanded')) {
+        currentOpenCard = clickedCard;
+        setTimeout(() => {
+          const cardPosition = clickedCard.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({ top: cardPosition - 10, behavior: 'smooth' });
+        }, 300);
+      } else {
+        clickedCard.style.animation = 'none';
+        clickedCard.style.transform = 'scale(1)';
+        currentOpenCard = null;
+      }
+    }
+  </script></body></html>
